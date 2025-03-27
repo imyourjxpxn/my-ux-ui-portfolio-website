@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Footer from './components/Footer';
 import Contact from './assets/pages/contact';
+import KUClub from './assets/pages/ku-club';
 
 // Create a wrapper component to handle footer logic
 const AppContent = () => {
@@ -26,6 +27,7 @@ const AppContent = () => {
           </div>
         } />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/ku-club" element={<KUClub />} />
       </Routes>
       {showFooter && <Footer />}
     </div>

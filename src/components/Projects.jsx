@@ -1,4 +1,5 @@
 import './Projects.css';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   const projects = [
@@ -7,7 +8,7 @@ const Projects = () => {
       title: "KU Club",
       category: "Web app",
       image: "/src/assets/project1.png",
-      link: "/projects/ku-club"
+      link: "/ku-club"  
     },
     {
       id: 2,
@@ -38,7 +39,7 @@ const Projects = () => {
         <div className="projects-wrapper">
           <div className="projects-list">
             {projects.map(project => (
-              <a href={project.link} className="project-item" key={project.id}>
+              <Link to={project.link} className="project-item" key={project.id}>
                 <div className="project-content">
                   <div className="project-image">
                     <img src={project.image} alt={project.title} />
@@ -48,7 +49,7 @@ const Projects = () => {
                     <p>{project.category}</p>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

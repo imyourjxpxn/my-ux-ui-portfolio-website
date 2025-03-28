@@ -1,355 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* Add at the beginning of the CSS file */
 .mordee-container {
-  padding: 20px;
-  background-color: transparent; /* Remove background color */
-  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.mordee-header h1 {
-  font-size: 3em; /* Increase the font size */
-  margin-bottom: 20px; /* Add more space below the heading */
+/* Make sure all text elements inherit the font */
+.mordee-container h1,
+.mordee-container h2,
+.mordee-container h3,
+.mordee-container h4,
+.mordee-container p,
+.mordee-container li,
+.mordee-container span,
+.mordee-container blockquote {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.mordee-header h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px; /* Adjust spacing as needed */
-}
-
-.mordee-header .subhead {
-  font-size: 1.2em;
-  color: #555;
-}
-
-.mordee-image-container {
-  margin-top: 20px;
-}
-
-.mordee-image {
+.mordee-container {
+  font-family: 'Montserrat', sans-serif;
+  color: #1A535C;
   max-width: 100%;
-  height: auto;
+  overflow-x: hidden;
 }
 
-.mordee-container p {
-  font-size: 1.2em;
-}
-
-.mordee-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 100px; /* Increase the margin-top for more spacing */
-}
-
-.mordee-logo {
-  flex: 1;
-}
-
-.logo-image {
-  max-width: 400px; /* Increase the maximum width */
-  height: auto;
-}
-
-.mordee-description {
-  flex: 2;
-  text-align: left;
-}
-
-.mordee-description h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.mordee-description p {
-  font-size: 1em;
-  color: #333;
-}
-
-.competition-section {
-  margin-top: 100px; /* Add 100 pixels of space above the section */
+/* Hero Section */
+.mordee-hero {
+  background: linear-gradient(135deg, #4ECDC4 0%, #1A535C 100%);
+  color: white;
+  padding: 6rem 2rem;
   text-align: center;
+  position: relative;
+  border-radius: 0 0 30px 30px;
 }
 
-.competition-title {
-  font-size: 3em; /* Large text */
-  color: #333;
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.feature-title {
-  font-size: 2em;
-  font-weight: bold;
-  color: #3cb371; /* Mint green color */
-  margin: 20px 0;
+.mordee-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.hero-image-placeholder {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 8rem 2rem;
+  margin: 0 auto;
+  max-width: 300px;
   text-align: center;
+  color: white;
+  border: 2px dashed rgba(255, 255, 255, 0.5);
 }
 
-.feature-quote {
-  font-size: 2em;
-  font-weight: bold;
-  color: #ff8c00; /* Orange color */
-  margin: 20px 0;
+/* Section Styling */
+.mordee-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mordee-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
   text-align: center;
-  font-style: italic;
+  position: relative;
 }
 
-.centered-bold {
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
+.mordee-section h2:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4ECDC4, #1A535C);
+  border-radius: 2px;
 }
 
-.columns {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+.mordee-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1A535C;
 }
 
-.column {
-  flex: 1;
-  padding: 40px; /* Increase padding for more spacing */
-}
-
-.column p {
-  font-size: 1em;
-  color: #333;
-  text-align: left; /* Align text to the left */
-}
-
-.survey-section {
-  margin: 60px auto;
-  max-width: 800px;
-  text-align: center;
-}
-
-.survey-title {
-  font-size: 2em;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 30px;
-}
-
-.survey-columns {
+/* Overview Section */
+.overview-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  position: relative;
+  gap: 3rem;
 }
 
-@media (min-width: 768px) {
-  .survey-columns {
-    flex-direction: row; /* Arrange items in a row on larger screens */
-    justify-content: space-between;
-  }
+.overview-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.interview-process, .research-process {
-  flex: 1;
-  background-color: #f0f8ff; /* Light blue color for stage */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.stat-item {
   text-align: center;
+  flex: 1;
+  min-width: 200px;
+  padding: 2rem;
+  background-color: #F7FFF7;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item h4 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FF6B6B;
+  margin-bottom: 1rem;
+}
+
+/* How It Started Section */
+.how-started {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin: 3rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.how-started h2 {
+  margin-bottom: 1.5rem;
+  color: #1A535C;
+}
+
+.how-started p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.how-started p:last-child {
+  margin-bottom: 0;
+}
+
+/* Project Details */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.detail-card {
+  background-color: #F7FFF7;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tools-list span {
+  background-color: #4ECDC4;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Problem Section */
+.problem-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.challenge-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.challenge-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.challenge-list li:before {
+  content: '❌';
+  position: absolute;
+  left: 0;
+}
+
+.quote-container {
+  background-color: #FFE66D;
+  padding: 2rem;
+  border-radius: 15px;
   position: relative;
 }
 
-.interview-process::after {
-  content: none; /* Remove arrow */
+blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+blockquote:before {
+  content: '"';
+  font-size: 4rem;
+  position: absolute;
+  left: -1.5rem;
+  top: -1rem;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.quote-attribution {
+  text-align: right;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.problem-image-placeholder {
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #777;
+  border: 2px dashed #ddd;
+}
+
+/* User Flow */
+.flow-comparison {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.flow-column h3 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.flow-column h3 span {
+  font-size: 1rem;
+  font-weight: normal;
+  display: block;
+  margin-top: 0.5rem;
+  color: #777;
+}
+
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #F7FFF7;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.traditional .flow-step {
+  border-left: 5px solid #FF6B6B;
+}
+
+.mordee .flow-step {
+  border-left: 5px solid #4ECDC4;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.traditional .step-number {
+  background-color: #FF6B6B;
+  color: white;
+}
+
+.mordee .step-number {
+  background-color: #4ECDC4;
+  color: white;
+}
+
+.flow-diagram-placeholder {
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #777;
+  border: 2px dashed #ddd;
+  margin-top: 3rem;
+}
+
+/* Design Process */
+.process-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+}
+
+.process-timeline:before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #eee;
+  z-index: -1;
+}
+
+.process-step {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.process-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  background-color: #4ECDC4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}
+
+/* Wireframes */
+.wireframes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.wireframe-placeholder {
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  padding: 8rem 1rem;
+  text-align: center;
+  color: #777;
+  border: 2px dashed #ddd;
+}
+
+.iteration-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.iteration-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.iteration-list li:before {
+  content: '🔹';
+  position: absolute;
+  left: 0;
+}
+
+/* Visual Design */
+.design-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.color-palette {
+  margin-bottom: 2rem;
+}
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.color-item {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.color-item span {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+  border-radius: 0 0 10px 10px;
+  font-size: 0.8rem;
+}
+
+.font-samples {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.font-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.font-body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Final Design */
+.final-screens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.screen-placeholder {
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  padding: 10rem 1rem 2rem;
+  text-align: center;
+  color: #777;
+  border: 2px dashed #ddd;
+}
+
+/* Impact */
+.impact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.improvements-list, .learnings-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.improvements-list li, .learnings-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.improvements-list li:before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+}
+
+.learnings-list li:before {
+  content: '🔹';
+  position: absolute;
+  left: 0;
+}
+
+/* Next Steps */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.step-card {
+  background-color: #F7FFF7;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid #4ECDC4;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .overview-content, 
+  .problem-content,
+  .impact-content {
+    flex-direction: row;
+  }
+  
+  .overview-text, 
+  .problem-challenges,
+  .impact-improvements {
+    flex: 3;
+  }
+  
+  .overview-stats, 
+  .quote-container,
+  .impact-learnings {
+    flex: 2;
+  }
+  
+  .flow-comparison {
+    flex-direction: row;
+  }
+  
+  .flow-column {
+    flex: 1;
+  }
+  
+  .traditional .flow-step {
+    border-left: none;
+    border-right: 5px solid #FF6B6B;
+  }
 }
 
 @media (max-width: 767px) {
-  .interview-process::after {
-    content: '↓'; /* Down arrow for smaller screens */
-    right: 50%;
-    top: 100%;
-    transform: translateX(50%);
+  .mordee-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .mordee-section h2 {
+    font-size: 2rem;
+  }
+  
+  .mordee-section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .stat-item h4 {
+    font-size: 2.5rem;
+  }
+  
+  .process-timeline:before {
+    display: none;
   }
 }
 
-.research-process {
-  flex: 1;
-  background-color: #e6f7ff; /* Light blue color */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.research-process h3 {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #333;
-}
-
-.research-process p {
-  font-size: 1em;
-  color: #333;
-  line-height: 1.6;
-}
-
-.survey-stats {
-  flex: 1;
+/* Achievement Section */
+.achievement-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
 }
 
-.survey-stat {
-  background-color: transparent; /* Remove background color */
-  border: none; /* Remove border */
-  padding: 0; /* Remove padding */
-  box-shadow: none; /* Remove box shadow */
-  margin: 10px 0; /* Keep margin for spacing */
+.achievement-highlight {
+  text-align: center;
+  max-width: 800px;
 }
 
-.survey-percent {
-  font-size: 3em; /* Keep increased font size for emphasis */
-  font-weight: bold;
-  color: #de1313; /* Red color to indicate risk */
+.achievement-highlight h3 {
+  color: #4ECDC4;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
-.survey-label {
-  font-size: 1em;
-  color: #666;
-  margin-top: 10px;
+.achievement-badge {
+  margin-top: 2rem;
 }
 
-.stats-text {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.donut-charts {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 30px;
-}
-
-.donut-chart {
+.badge-circle {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: conic-gradient(
-    #ff8c00 0% 68.45%,
-    #e0e0e0 68.45% 100%
-  );
-  position: relative;
-}
-
-.donut-chart:nth-child(2) {
-  background: conic-gradient(
-    #3cb371 0% 51.95%,
-    #e0e0e0 51.95% 100%
-  );
-}
-
-.donut-hole {
-  position: absolute;
-  width: 70%;
-  height: 70%;
-  background-color: #f0e6d2;
-  border-radius: 50%;
-  top: 15%;
-  left: 15%;
+  background: linear-gradient(135deg, #4ECDC4 0%, #1A535C 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.donut-percent {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #333;
+.badge-circle:hover {
+  transform: scale(1.05);
 }
 
-.donut-label {
-  font-size: 0.9em;
-  color: #666;
-  margin-top: 5px;
+.badge-number {
+  font-size: 3.5rem;
+  line-height: 1;
+  margin: 0.5rem 0;
 }
 
-.stats-link {
-  color: #3cb371; /* Mint green color */
-  text-decoration: none;
-  margin-left: 5px;
-}
-
-.stats-link:hover {
-  text-decoration: underline;
-  color: #ff8c00; /* Orange color on hover */
-}
-
-.challenge-icon {
-  font-size: 6em; /* Increased from 4em to 6em */
-  color: #ffd700;
-  margin: 40px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.challenge-icon svg {
-  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
-}
-
-.challenge-icon i {
-  padding: 20px;
-  border-radius: 50%;
-  background-color: rgba(255, 165, 0, 0.1); /* Subtle background */
-}
-
-.research-title {
-  font-size: 2.5em; /* Larger font size for emphasis */
-  font-weight: bold;
-  color: #333;
-  margin-top: 40px;
-}
-
-.research-text {
-  font-size: 1.2em;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-.research-stages {
-  display: flex;
-  justify-content: space-around;
-  margin: 40px 0;
-}
-
-.stage {
-  flex: 1;
-  background-color: #f0f8ff; /* Light blue color for stage */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.stage-title {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.stage-description {
-  font-size: 1em;
-  color: #666;
-  line-height: 1.6;
-}
-
-.interview-questions {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  text-align: left;
-  margin-top: 20px;
-}
-
-.interview-questions li {
-  font-size: 1em;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 10px;
+@media (min-width: 768px) {
+  .achievement-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .achievement-highlight {
+    flex: 3;
+    text-align: left;
+  }
+  
+  .achievement-badge {
+    flex: 1;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
 }

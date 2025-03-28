@@ -1,5 +1,11 @@
-import './Projects.css';
+import { Card, CardContent, CardMedia, Typography, Grid, Container, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
+import './Projects.css';
+
+// Create theme configuration for Montserrat
+const fontStyle = {
+  fontFamily: "'Montserrat', sans-serif"
+};
 
 const Projects = () => {
   const projects = [
@@ -8,52 +14,126 @@ const Projects = () => {
       title: "KU Club",
       category: "Web app",
       image: "/src/assets/project1.png",
-      link: "/ku-club"  
+      link: "/ku-club",
+      tags: ["UX/UI", "Web App"]
     },
     {
       id: 2,
       title: "Mordee",
       category: "Mobile app",
       image: "/src/assets/project2.png",
-      link: "/mordee"
+      link: "/mordee",
+      tags: ["UX/UI", "Mobile App"]
     },
     {
       id: 3,
       title: "SeniorPlay",
       category: "Mobile app",
       image: "/src/assets/project3.png",
-      link: "/projects/seniorplay"
-    }, {
+      link: "/seniorplay",
+      tags: ["UX/UI", "Mobile App", "Hackathon"]
+    }, 
+    {
       id: 4,
       title: "Agro Bakery Lab Booking",
       category: "Website",
       image: "/src/assets/project4.png",
-      link: "/projects/AgroBakeryLabBooking"
+      link: "/agrobakery",
+      tags: ["Frontend", "Website"]
     }
   ];
 
   return (
     <section id="projects" className="projects">
-      <div className="container">
-        <h2 className="section-title">Featured Projects</h2>
-        <div className="projects-wrapper">
-          <div className="projects-list">
-            {projects.map(project => (
-              <Link to={project.link} className="project-item" key={project.id}>
-                <div className="project-content">
-                  <div className="project-image">
-                    <img src={project.image} alt={project.title} />
-                  </div>
-                  <div className="project-info">
-                    <h3>{project.title}</h3>
-                    <p>{project.category}</p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+      <Container maxWidth="lg" sx={fontStyle}>
+        <Typography 
+          variant="h3" 
+          component="h2" 
+          align="center" 
+          className="section-title"
+          sx={{ 
+            marginBottom: '4rem',
+            position: 'relative',
+            paddingBottom: '1.5rem',
+            ...fontStyle
+          }}
+        >
+          Featured Projects
+        </Typography>
+        <Grid container spacing={4} justifyContent="center" sx={{ margin: '0 auto' }}>
+          {projects.map(project => (
+            <Grid item xs={12} sm={6} key={project.id}>
+              <Box 
+                component={Link} 
+                to={project.link} 
+                sx={{ 
+                  textDecoration: 'none',
+                  display: 'block',
+                  transition: 'transform 0.3s',
+                  '&:hover': {
+                    transform: 'translateY(-8px)'
+                  },
+                  ...fontStyle
+                }}
+              >
+                <Card 
+                  sx={{ 
+                    height: '100%', 
+                    display: 'flex', 
+                    flexDirection: 'column',
+                    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.08)',
+                    borderRadius: '12px',
+                    ...fontStyle
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    height="240"
+                    image={project.image}
+                    alt={project.title}
+                    sx={{ objectFit: 'cover' }}
+                  />
+                  <CardContent sx={{ 
+                    flexGrow: 1, 
+                    display: 'flex', 
+                    flexDirection: 'column',
+                    padding: '1.5rem',
+                    justifyContent: 'space-between',
+                    height: '160px',
+                    ...fontStyle
+                  }}>
+                    <Typography 
+                      variant="h5" 
+                      component="h3" 
+                      sx={{ 
+                        color: '#5D4037', 
+                        fontWeight: 600,
+                        marginBottom: '1rem',
+                        fontSize: '1.5rem',
+                        lineHeight: 1.2,
+                        ...fontStyle
+                      }}
+                    >
+                      {project.title}
+                    </Typography>
+                    <Typography 
+                      variant="body2" 
+                      sx={{ 
+                        color: '#8D6E63', 
+                        marginTop: 'auto',
+                        fontSize: '0.9rem',
+                        ...fontStyle
+                      }}
+                    >
+                      Case Study + {project.tags.join(' / ')}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </section>
   );
 };

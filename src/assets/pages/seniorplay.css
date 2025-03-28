@@ -1,0 +1,325 @@
+/* SeniorPlay Page Styles - Using color palette from chart */
+:root {
+  /* Primary Colors */
+  --primary-purple: #8B5CF6;
+  --primary-deep-purple: #561368;
+  --primary-light-purple: #DFD5F6;
+  
+  /* Secondary Colors */
+  --secondary-yellow: #F9BA49;
+  --secondary-orange: #F97316;
+  --secondary-green: #17634A;
+  --secondary-light-yellow: #FFEFC6;
+  --secondary-light-peach: #FFCAA4;
+  --secondary-light-green: #CFEE9A;
+  
+  /* Neutral Colors */
+  --neutral-white: #F3F3F3;
+  --neutral-light-gray: #E5E7EB;
+  --neutral-gray: #757575;
+  --neutral-dark: #353333;
+  
+  /* Font Family */
+  --font-family: 'Montserrat', sans-serif;
+}
+
+/* Apply Montserrat font to all elements */
+.seniorplay-container * {
+  font-family: var(--font-family);
+}
+
+.seniorplay-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.seniorplay-hero {
+  padding: 5rem 0 3rem;
+  text-align: center;
+  background-color: var(--primary-light-purple);
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-deep-purple);
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--primary-purple);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* แก้ไขส่วนของ image slider ให้อยู่ตรงกลาง */
+.image-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #333;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    height: 300px;
+  }
+  
+  .slider-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Achievement Section */
+.achievement-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.achievement-highlight {
+  text-align: center;
+  max-width: 800px;
+}
+
+.achievement-highlight h3 {
+  color: var(--secondary-green);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-badge {
+  margin-top: 1rem;
+}
+
+.badge-circle {
+  width: 150px;  /* ลดขนาดจาก 200px เป็น 150px */
+  height: 150px; /* ลดขนาดจาก 200px เป็น 150px */
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--secondary-green) 0%, var(--secondary-light-green) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.badge-circle:hover {
+  transform: scale(1.05);
+}
+
+.badge-circle span {
+  font-size: 1rem; /* ลดขนาดตัวอักษรลง */
+}
+
+.badge-number {
+  font-size: 2rem; /* ลดขนาดจาก 2.5rem เป็น 2rem */
+  line-height: 1;
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 768px) {
+  .badge-circle {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .badge-number {
+    font-size: 1.8rem;
+  }
+}
+
+/* Research Image Container */
+.research-image-container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.research-image-placeholder {
+  background-color: var(--neutral-light-gray);
+  border-radius: 15px;
+  padding: 8rem 2rem;
+  text-align: center;
+  color: var(--neutral-gray);
+  border: 2px dashed var(--secondary-orange);
+  width: 100%;
+  max-width: 800px;
+}
+
+/* เมื่อมีรูปภาพจริง สามารถใช้ CSS นี้แทน */
+.research-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Market Analysis Image Container */
+.market-analysis-container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.market-analysis-placeholder {
+  background-color: var(--neutral-light-gray);
+  border-radius: 15px;
+  padding: 8rem 2rem;
+  text-align: center;
+  color: var(--neutral-gray);
+  border: 2px dashed var(--secondary-yellow);
+  width: 100%;
+  max-width: 800px;
+}
+
+.market-analysis-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* UI Style Guide */
+.style-guide-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.style-guide-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.style-guide-image:hover {
+  transform: translateY(-5px);
+}
+
+.style-guide-placeholder {
+  background-color: var(--neutral-light-gray);
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-gray);
+  border: 2px dashed var(--primary-purple);
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .style-guide-container {
+    grid-template-columns: 1fr;
+  }
+}

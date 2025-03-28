@@ -15,7 +15,7 @@ const Projects = () => {
       title: "Mordee",
       category: "Mobile app",
       image: "/src/assets/project2.png",
-      link: "/projects/mordee"
+      link: "/mordee"
     },
     {
       id: 3,

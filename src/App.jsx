@@ -6,6 +6,7 @@ import './App.css';
 import Footer from './components/Footer';
 import Contact from './assets/pages/contact';
 import KUClub from './assets/pages/ku-club';
+import Mordee from './assets/pages/Mordee';
 
 // Create a wrapper component to handle footer logic
 const AppContent = () => {
@@ -28,6 +29,7 @@ const AppContent = () => {
         } />
         <Route path="/contact" element={<Contact />} />
         <Route path="/ku-club" element={<KUClub />} />
+        <Route path="/mordee" element={<Mordee />} /> 
       </Routes>
       {showFooter && <Footer />}
     </div>

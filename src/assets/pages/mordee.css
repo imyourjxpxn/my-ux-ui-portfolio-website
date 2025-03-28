@@ -1,0 +1,355 @@
+.mordee-container {
+  padding: 20px;
+  background-color: transparent; /* Remove background color */
+  text-align: center;
+}
+
+.mordee-header h1 {
+  font-size: 3em; /* Increase the font size */
+  margin-bottom: 20px; /* Add more space below the heading */
+}
+
+.mordee-header h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.mordee-header .subhead {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.mordee-image-container {
+  margin-top: 20px;
+}
+
+.mordee-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.mordee-container p {
+  font-size: 1.2em;
+}
+
+.mordee-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px; /* Increase the margin-top for more spacing */
+}
+
+.mordee-logo {
+  flex: 1;
+}
+
+.logo-image {
+  max-width: 400px; /* Increase the maximum width */
+  height: auto;
+}
+
+.mordee-description {
+  flex: 2;
+  text-align: left;
+}
+
+.mordee-description h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.mordee-description p {
+  font-size: 1em;
+  color: #333;
+}
+
+.competition-section {
+  margin-top: 100px; /* Add 100 pixels of space above the section */
+  text-align: center;
+}
+
+.competition-title {
+  font-size: 3em; /* Large text */
+  color: #333;
+}
+
+.feature-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #3cb371; /* Mint green color */
+  margin: 20px 0;
+  text-align: center;
+}
+
+.feature-quote {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff8c00; /* Orange color */
+  margin: 20px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.centered-bold {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.column {
+  flex: 1;
+  padding: 40px; /* Increase padding for more spacing */
+}
+
+.column p {
+  font-size: 1em;
+  color: #333;
+  text-align: left; /* Align text to the left */
+}
+
+.survey-section {
+  margin: 60px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.survey-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.survey-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .survey-columns {
+    flex-direction: row; /* Arrange items in a row on larger screens */
+    justify-content: space-between;
+  }
+}
+
+.interview-process, .research-process {
+  flex: 1;
+  background-color: #f0f8ff; /* Light blue color for stage */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.interview-process::after {
+  content: none; /* Remove arrow */
+}
+
+@media (max-width: 767px) {
+  .interview-process::after {
+    content: '↓'; /* Down arrow for smaller screens */
+    right: 50%;
+    top: 100%;
+    transform: translateX(50%);
+  }
+}
+
+.research-process {
+  flex: 1;
+  background-color: #e6f7ff; /* Light blue color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.research-process h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.research-process p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.survey-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.survey-stat {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  box-shadow: none; /* Remove box shadow */
+  margin: 10px 0; /* Keep margin for spacing */
+}
+
+.survey-percent {
+  font-size: 3em; /* Keep increased font size for emphasis */
+  font-weight: bold;
+  color: #de1313; /* Red color to indicate risk */
+}
+
+.survey-label {
+  font-size: 1em;
+  color: #666;
+  margin-top: 10px;
+}
+
+.stats-text {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.donut-charts {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.donut-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff8c00 0% 68.45%,
+    #e0e0e0 68.45% 100%
+  );
+  position: relative;
+}
+
+.donut-chart:nth-child(2) {
+  background: conic-gradient(
+    #3cb371 0% 51.95%,
+    #e0e0e0 51.95% 100%
+  );
+}
+
+.donut-hole {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background-color: #f0e6d2;
+  border-radius: 50%;
+  top: 15%;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.donut-percent {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+}
+
+.donut-label {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.stats-link {
+  color: #3cb371; /* Mint green color */
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.stats-link:hover {
+  text-decoration: underline;
+  color: #ff8c00; /* Orange color on hover */
+}
+
+.challenge-icon {
+  font-size: 6em; /* Increased from 4em to 6em */
+  color: #ffd700;
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.challenge-icon svg {
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+.challenge-icon i {
+  padding: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 165, 0, 0.1); /* Subtle background */
+}
+
+.research-title {
+  font-size: 2.5em; /* Larger font size for emphasis */
+  font-weight: bold;
+  color: #333;
+  margin-top: 40px;
+}
+
+.research-text {
+  font-size: 1.2em;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.research-stages {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.stage {
+  flex: 1;
+  background-color: #f0f8ff; /* Light blue color for stage */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stage-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.stage-description {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+}
+
+.interview-questions {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  text-align: left;
+  margin-top: 20px;
+}
+
+.interview-questions li {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}

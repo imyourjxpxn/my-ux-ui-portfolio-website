@@ -1,5 +1,12 @@
 import React, { useEffect } from 'react';
 import './seniorplay.css';
+import main from '../images/seniorplay/main.png';
+import Assumption_map from '../images/seniorplay/Assumption_map.png';
+import Marketfit from '../images/seniorplay/Marketfit.png'; 
+import wireframe from '../images/seniorplay/wireframe.png'; 
+import Styleguide from '../images/seniorplay/Styleguide.png';
+import UIkits from '../images/seniorplay/UI.png'; // Updated import
+// Removed import for UI
 
 const SeniorPlay = () => {
   useEffect(() => {
@@ -13,9 +20,7 @@ const SeniorPlay = () => {
         <div className="hero-content">
           <h1>Senior<span>Play</span></h1>
           <p className="hero-subtitle">A Fun & Engaging Game App for Seniors</p>
-          <div className="hero-image-placeholder">
-            <p>Main App Screenshot</p>
-          </div>
+          <img src={main} alt="SeniorPlay Hero" style={{ width: '100%', height: 'auto' }} />
         </div>
       </div>
 
@@ -90,17 +95,7 @@ const SeniorPlay = () => {
             <p className="quote-attribution">— Senior, 72</p>
           </div>
         </div>
-        <div className="pain-points">
-          <h3>💡 User Pain Points</h3>
-          <ul className="pain-list">
-            <li><span className="pain-icon">❌</span> Difficult controls & UI → Small buttons, too many steps to start playing</li>
-            <li><span className="pain-icon">❌</span> Fast-paced gameplay → Stressful instead of relaxing</li>
-            <li><span className="pain-icon">❌</span> No social features → Most games are single-player</li>
-          </ul>
-        </div>
-        <div className="problem-image-placeholder">
-          <p>Problem Visualization</p>
-        </div>
+        {/* Removed User Pain Points and Image */}
       </section>
 
       {/* Research & Insights - Using Secondary Colors #F9BA49, #FFEFC6 */}
@@ -108,11 +103,8 @@ const SeniorPlay = () => {
         <h2>Research & Insights</h2>
         <p>For this project, we took a unique approach to understanding the needs of elderly users by performing Assumption Mapping. We hypothesized the potential pain points and needs that seniors might face while engaging with mobile apps, specifically in the context of gaming and cognitive engagement. This method allowed us to form educated assumptions about how the target audience would interact with a game app and what challenges they might encounter.</p>
         
-        {/* เพิ่มพื้นที่สำหรับรูปภาพ Assumption Mapping */}
         <div className="research-image-container">
-          <div className="research-image-placeholder">
-            <p>Assumption Mapping Visualization</p>
-          </div>
+          <img src={Assumption_map} alt="Assumption Mapping" style={{ width: '100%', height: 'auto' }} />
         </div>
         
         <p>Through Assumption Mapping, we identified key areas to focus on:</p>
@@ -124,11 +116,8 @@ const SeniorPlay = () => {
         
         <p>Once we had our assumptions mapped out, we then looked at the market fit by analyzing existing apps targeted at the elderly. We evaluated their strengths, weaknesses, and gaps in the user experience, which helped us refine the features we would include in Senior Play.</p>
         
-        {/* เพิ่มพื้นที่สำหรับรูปภาพการวิเคราะห์ตลาด */}
         <div className="market-analysis-container">
-          <div className="market-analysis-placeholder">
-            <p>Market Analysis & Competitive Research</p>
-          </div>
+          <img src={Marketfit} alt="Market Fit Analysis" style={{ width: '100%', height: 'auto' }} />
         </div>
         
       </section>
@@ -171,42 +160,21 @@ const SeniorPlay = () => {
       <section className="seniorplay-section wireframes">
         <h2>Wireframes & UI Design</h2>
         
-        {/* ส่วนที่เหลือของโค้ด */}
         <p>Our design process focused on creating an interface that's easy to read, navigate, and enjoy for seniors with varying levels of tech experience.</p>
         
         <div className="wireframes-grid">
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Home Screen</p>
-          </div>
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Game Selection</p>
-          </div>
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Social Features</p>
-          </div>
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Game Settings</p>
-          </div>
+          <img src={wireframe} alt="Wireframe Design" style={{ width: '100%', height: 'auto' }} />
         </div>
         
         <div className="design-elements">
           <h3>UI Style Guide</h3>
           <div className="style-guide-container">
-            <div className="style-guide-image">
-              <div className="style-guide-placeholder">
-                <p>Typography & Colors</p>
-              </div>
-            </div>
-            <div className="style-guide-image">
-              <div className="style-guide-placeholder">
-                <p>Components & Elements</p>
-              </div>
-            </div>
-            <div className="style-guide-image">
-              <div className="style-guide-placeholder">
-                <p>Iconography & Illustrations</p>
-              </div>
-            </div>
+            <a href={Styleguide} target="_blank" rel="noopener noreferrer">
+              <img src={Styleguide} alt="Typography & Colors" />
+            </a>
+            <a href={UIkits} target="_blank" rel="noopener noreferrer">
+              <img src={UIkits} alt="Components & Elements" />
+            </a>
           </div>
           <p>Our style guide was designed with accessibility in mind, featuring high contrast colors, readable typography, and clear iconography for senior users.</p>
         </div>
@@ -216,24 +184,7 @@ const SeniorPlay = () => {
       <section className="seniorplay-section final-design">
         <h2>Final UI Design</h2>
         <div className="final-screens">
-          <div className="screen-placeholder">
-            <p>Home Screen</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Game Selection</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Game Play</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Social Tab</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Settings</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Family Connection</p>
-          </div>
+          <img src={UIkits} alt="Final UI Design" style={{ width: '100%', height: 'auto' }} />
         </div>
       </section>
 

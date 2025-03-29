@@ -1,86 +1,30 @@
 import React, { useEffect } from 'react';
 import './mordee.css';
 
+// Import images
+import mainAppScreenshot from '../images/mordee/main-app-screenshot.png';
+import wireframe from '../images/mordee/wireframe.png';
+import finalHome from '../images/mordee/final.png';
+import typography from '../images/mordee/typography.png';
+import color from '../images/mordee/color.png';
+import component from '../images/mordee/component.png';
+import UIkits from '../images/mordee/UIkits.png';
+
 const Mordee = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Add a style object for consistent font usage
-  const fontStyle = {
-    fontFamily: "'Montserrat', sans-serif"
-  };
-
   return (
-    <div className="mordee-container" style={fontStyle}>
+    <div className="mordee-container">
       {/* Hero Section */}
       <div className="mordee-hero">
         <div className="hero-content">
           <h1>Mordee</h1>
           <p className="hero-subtitle">Telemedicine Application for NCD Patients</p>
-          {/* ตรงนี้ควรใส่รูปหน้าจอหลักของแอพ Mordee */}
-          <div className="hero-image-placeholder">
-            <p>Main App Screenshot</p>
-          </div>
+          <img src={mainAppScreenshot} alt="Main App Screenshot" />
         </div>
       </div>
-
-      {/* Project Details - ย้ายมาอยู่ด้านบนสุดถัดจาก Hero */}
-      <section className="mordee-section details">
-        <div className="details-grid">
-          <div className="detail-card">
-            <h3>Role</h3>
-            <p>UX/UI Designer</p>
-          </div>
-          <div className="detail-card">
-            <h3>Timeline</h3>
-            <p>6 weeks</p>
-          </div>
-          <div className="detail-card">
-            <h3>Tools</h3>
-            <div className="tools-list">
-              <span>Figma</span>
-              <span>Google Forms</span>
-              <span>Miro</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Started */}
-      <section className="mordee-section how-started">
-        <h2>👩‍⚕️ How It Started</h2>
-        <p>One day, I came across an announcement about the TrueLab x Mordee Hackathon, which aimed to develop innovative features for telemedicine applications. The challenge focused on improving accessibility to online medical services for Thai people.</p>
-        <p>I saw this as a great opportunity to design a user experience that directly addresses real healthcare challenges.</p>
-      </section>
-
-      {/* Project Overview */}
-      <section className="mordee-section overview">
-        <h2>Project Overview</h2>
-        <div className="overview-content">
-          <div className="overview-text">
-            <h3>Background</h3>
-            <p>
-              Growing up, I was surrounded by stories from my mother, who is a nurse. She often shared how many NCD 
-              (Non-Communicable Disease) patients struggled with managing their health. Many of them had to frequently 
-              visit hospitals for medication refills and follow-ups. Yet, some missed appointments due to inconvenience, 
-              long wait times, or lack of transportation—leading to worsened conditions.
-            </p>
-          </div>
-          <div className="overview-stats">
-            <div className="stat-item">
-              <h4>70%</h4>
-              <p>of people surveyed weren't aware of telemedicine apps</p>
-            </div>
-            <div className="stat-item">
-              <h4>60%</h4>
-              <p>of users had lifestyle habits that increased their risk of NCDs</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ลบส่วน Project Details ที่ซ้ำกันอยู่ในไฟล์ mordee.jsx ผมจะแนะนำให้ลบส่วนที่ซ้ำออกครับ */}
 
       {/* Problem Statement */}
       <section className="mordee-section problem">
@@ -102,10 +46,7 @@ const Mordee = () => {
             <p className="quote-attribution">— NCD Patient, 58</p>
           </div>
         </div>
-        {/* ตรงนี้ควรใส่รูปแสดงปัญหาหรือ pain points */}
-        <div className="problem-image-placeholder">
-          <p>Problem Visualization</p>
-        </div>
+        {/* <img src={problemVisualization} alt="Problem Visualization" /> */}
       </section>
 
       {/* User Flow */}
@@ -163,42 +104,7 @@ const Mordee = () => {
             </div>
           </div>
         </div>
-        {/* ตรงนี้ควรใส่รูป user flow diagram */}
-        <div className="flow-diagram-placeholder">
-          <p>User Flow Diagram</p>
-        </div>
-      </section>
-
-      {/* Design Process */}
-      <section className="mordee-section design-process">
-        <h2>Design Process</h2>
-        <div className="process-timeline">
-          <div className="process-step">
-            <div className="process-icon research"></div>
-            <h3>Research</h3>
-            <p>Conducted surveys and interviews with NCD patients to understand their challenges</p>
-          </div>
-          <div className="process-step">
-            <div className="process-icon ideation"></div>
-            <h3>Ideation</h3>
-            <p>Brainstormed solutions to address key pain points identified in research</p>
-          </div>
-          <div className="process-step">
-            <div className="process-icon wireframing"></div>
-            <h3>Wireframing</h3>
-            <p>Created low-fidelity wireframes to establish the app structure</p>
-          </div>
-          <div className="process-step">
-            <div className="process-icon testing"></div>
-            <h3>Testing</h3>
-            <p>Conducted usability tests with potential users to refine the design</p>
-          </div>
-          <div className="process-step">
-            <div className="process-icon final"></div>
-            <h3>Final Design</h3>
-            <p>Developed high-fidelity mockups and interactive prototype</p>
-          </div>
-        </div>
+        {/* <img src={userFlowDiagram} alt="User Flow Diagram" /> */}
       </section>
 
       {/* Wireframes */}
@@ -206,19 +112,7 @@ const Mordee = () => {
         <h2>Wireframes & Iterations</h2>
         <p>Initial sketches focused on simplifying the booking process and integrating reminders. Feedback showed users needed clearer medication tracking and symptom logging.</p>
         <div className="wireframes-grid">
-          {/* ตรงนี้ควรใส่รูป wireframes 3-4 รูป */}
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Home Screen</p>
-          </div>
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Appointment Booking</p>
-          </div>
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Medication Reminder</p>
-          </div>
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Health Tracking</p>
-          </div>
+          <img src={wireframe} alt="Wireframe - Home Screen" style={{ width: '100%', height: 'auto' }} />
         </div>
         <div className="iterations">
           <h3>Key Iterations After Usability Testing</h3>
@@ -234,23 +128,19 @@ const Mordee = () => {
       <section className="mordee-section visual-design">
         <h2>Visual Design</h2>
         <div className="design-elements">
-          <div className="color-palette">
-            <h3>Color Scheme</h3>
-            <div className="colors">
-              <div className="color-item" style={{ backgroundColor: '#4ECDC4' }}><span>Mint Green</span></div>
-              <div className="color-item" style={{ backgroundColor: '#FF6B6B' }}><span>Coral</span></div>
-              <div className="color-item" style={{ backgroundColor: '#FFE66D' }}><span>Yellow</span></div>
-              <div className="color-item" style={{ backgroundColor: '#F7FFF7' }}><span>Off-White</span></div>
-              <div className="color-item" style={{ backgroundColor: '#1A535C' }}><span>Dark Teal</span></div>
-            </div>
-            <p>The color scheme was chosen to create a warm, trustworthy feel while emphasizing health and energy.</p>
-          </div>
-          <div className="typography">
-            <h3>Typography</h3>
-            <div className="font-samples">
-              <div className="font-heading">Montserrat</div>
-              <div className="font-body">Roboto</div>
-            </div>
+          <div className="visual-images" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+            <a href={typography} target="_blank" rel="noopener noreferrer">
+              <img src={typography} alt="Typography" style={{ width: '48%', objectFit: 'contain', marginBottom: '10px' }} />
+            </a>
+            <a href={color} target="_blank" rel="noopener noreferrer">
+              <img src={color} alt="Color Scheme" style={{ width: '48%', objectFit: 'contain', marginBottom: '10px' }} />
+            </a>
+            <a href={component} target="_blank" rel="noopener noreferrer">
+              <img src={component} alt="Component" style={{ width: '48%', objectFit: 'contain' }} />
+            </a>
+            <a href={UIkits} target="_blank" rel="noopener noreferrer">
+              <img src={UIkits} alt="UI Kits" style={{ width: '48%', objectFit: 'contain' }} />
+            </a>
           </div>
         </div>
       </section>
@@ -259,25 +149,7 @@ const Mordee = () => {
       <section className="mordee-section final-design">
         <h2>Final UI Design</h2>
         <div className="final-screens">
-          {/* ตรงนี้ควรใส่รูปหน้าจอสุดท้าย 4-6 รูป */}
-          <div className="screen-placeholder">
-            <p>Home & Dashboard</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Appointment Booking</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Medication Reminder</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Health Tracking</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Doctor Consultation</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Reports</p>
-          </div>
+          <img src={finalHome} alt="Final UI Design" style={{ width: '100%', height: 'auto' }} />
         </div>
       </section>
 

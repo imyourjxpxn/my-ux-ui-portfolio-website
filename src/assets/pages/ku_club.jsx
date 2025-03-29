@@ -1,54 +1,24 @@
 import React, { useEffect } from 'react';
 import './ku-club.css';
 
-// Mock images with dimensions
-const mockImages = {
-  banner: {
-    name: "ku-club-banner.jpg",
-    size: "1920x1080px",
-    description: "Banner image showing KU Club homepage"
-  },
-  wireframe1: {
-    name: "ku-club-wireframe-1.jpg",
-    size: "800x600px",
-    description: "Low-fidelity wireframe of club listing"
-  },
-  wireframe2: {
-    name: "ku-club-wireframe-2.jpg",
-    size: "800x600px",
-    description: "Low-fidelity wireframe of club details"
-  },
-  wireframe3: {
-    name: "ku-club-wireframe-3.jpg",
-    size: "800x600px",
-    description: "Low-fidelity wireframe of event calendar"
-  },
-  final1: {
-    name: "ku-club-final-1.jpg",
-    size: "1200x800px",
-    description: "Final design of club listing page"
-  },
-  final2: {
-    name: "ku-club-final-2.jpg",
-    size: "1200x800px",
-    description: "Final design of club details page"
-  },
-  final3: {
-    name: "ku-club-final-3.jpg",
-    size: "1200x800px",
-    description: "Final design of event calendar"
-  },
-  responsive1: {
-    name: "ku-club-responsive-1.jpg",
-    size: "375x812px",
-    description: "Mobile view of club listing"
-  },
-  responsive2: {
-    name: "ku-club-responsive-2.jpg",
-    size: "768x1024px",
-    description: "Tablet view of club details"
-  }
-};
+import KUClubBanner from '../images/ku-club/ku-club-banner.png';
+import lowwireframe from  '../images/ku-club/low-wireframe-image.jpg';
+import midwireframe from '../images/ku-club/mid-wireframe-image.png';
+import Iteration1 from '../images/ku-club/Iteration1.png';
+import Iteration2 from '../images/ku-club/Iteration2.png';
+import Iteration3 from '../images/ku-club/Iteration3.png';
+import Iteration4 from '../images/ku-club/Iteration4.png';
+
+import typography from '../images/ku-club/typography.png';
+import color from '../images/ku-club/color.png';
+import component from '../images/ku-club/component.png';
+import UIkits from '../images/ku-club/UIkits.png'
+
+import ImpactErrorMatrix from '../images/ku-club/ImpactMatrix.png';
+
+import FinalDesign from '../images/ku-club/hifi-wireframe.png';
+
+import responsive from '../images/ku-club/wireframe-mobile.png';
 
 const KUClub = () => {
   useEffect(() => {
@@ -57,26 +27,24 @@ const KUClub = () => {
 
   return (
     <div className="project-container">
-      {/* Banner Section */}
+      {/* Banner Section - ปรับปรุงให้ดูสวยงามขึ้น */}
       <div className="banner">
-        <div className="mock-image">
-          <div className="mock-image-placeholder">
-            <p className="mock-image-name">{mockImages.banner.name}</p>
-            <p className="mock-image-size">{mockImages.banner.size}</p>
-            <p className="mock-image-desc">{mockImages.banner.description}</p>
-          </div>
-        </div>
+        <img 
+          src={KUClubBanner} 
+          alt="KU Clubs Banner" 
+        />
       </div>
 
-      {/* Project Header */}
+      {/* Project Header - เพิ่ม animation และปรับแต่งให้ดูโดดเด่น */}
       <div className="project-header">
         <h1>KU Clubs</h1>
+        <div className="header-underline"></div>
         <p className="project-subtitle">
           A web application designed to help Kasetsart University students discover and join clubs
         </p>
       </div>
 
-      {/* Project Info */}
+      {/* Project Info - ปรับการแสดงผลให้ดูทันสมัยขึ้น */}
       <div className="project-info">
         <div className="info-item">
           <h3>Role</h3>
@@ -88,25 +56,25 @@ const KUClub = () => {
         </div>
         <div className="info-item">
           <h3>Tools</h3>
-          <div className="tools-list">
+          <p className="tools-paragraph">
             <span className="tool">Figma</span>
             <span className="tool">Adobe XD</span>
             <span className="tool">Miro</span>
-          </div>
+          </p>
         </div>
       </div>
 
-      {/* Overview Section */}
+      {/* Overview Section - เพิ่ม highlight */}
       <section className="section">
         <h2>Overview</h2>
         <p>
           KU Clubs is a platform designed to centralize information about student clubs at Kasetsart University. 
-          The goal was to create an intuitive interface where students can easily discover clubs, 
+          The goal was to create an <span className="highlight">intuitive interface</span> where students can easily discover clubs, 
           view upcoming events, and join activities that match their interests.
         </p>
       </section>
 
-      {/* Problem Section */}
+      {/* Problem Section - ปรับ list style */}
       <section className="section">
         <h2>Problem</h2>
         <p>
@@ -120,7 +88,7 @@ const KUClub = () => {
         </ul>
       </section>
 
-      {/* Research Section */}
+      {/* Research Section - เพิ่ม card effect */}
       <section className="section">
         <h2>Research</h2>
         <p>
@@ -143,34 +111,27 @@ const KUClub = () => {
         </div>
       </section>
 
-      {/* Design Process */}
+      {/* Design Process - ปรับการแสดงผลของรูปภาพ */}
       <section className="section">
         <h2>Design Process</h2>
-        <div className="process-steps">
-          <div className="process-step">
-            <div className="step-number">1</div>
-            <h3>Research & Analysis</h3>
-            <p>User interviews, competitive analysis, and problem definition</p>
-          </div>
-          <div className="process-step">
-            <div className="step-number">2</div>
-            <h3>Ideation & Wireframing</h3>
-            <p>Sketching solutions and creating low-fidelity wireframes</p>
-          </div>
-          <div className="process-step">
-            <div className="step-number">3</div>
-            <h3>Prototyping</h3>
-            <p>Building interactive prototypes for user testing</p>
-          </div>
-          <div className="process-step">
-            <div className="step-number">4</div>
-            <h3>Testing & Iteration</h3>
-            <p>Gathering feedback and refining the design</p>
-          </div>
+        <p>
+          To ensure efficient development and maximum user value, I utilized an Impact-Error Matrix 
+          for feature prioritization. This approach helped balance user expectations with our 
+          development timeline.
+        </p>
+        <div className="impact-matrix">
+          <img 
+            src={ImpactErrorMatrix} 
+            alt="Impact-Error Matrix" 
+            className="responsive-image" 
+            onClick={() => window.open(ImpactErrorMatrix, '_blank')}
+            style={{ cursor: 'pointer' }}
+          />
+          <p className="image-caption">Impact-Error Matrix for Feature Prioritization</p>
         </div>
       </section>
 
-      {/* Wireframes */}
+      {/* Wireframes - ปรับการแสดงผลให้ดูสวยงามขึ้น */}
       <section className="section">
         <h2>Wireframes</h2>
         <p>
@@ -178,141 +139,182 @@ const KUClub = () => {
         </p>
         <div className="wireframes">
           <div className="wireframe">
-            <div className="mock-image">
-              <div className="mock-image-placeholder">
-                <p className="mock-image-name">{mockImages.wireframe1.name}</p>
-                <p className="mock-image-size">{mockImages.wireframe1.size}</p>
-                <p className="mock-image-desc">{mockImages.wireframe1.description}</p>
-              </div>
-            </div>
-            <p>Club Listing</p>
+            <img 
+              src={lowwireframe} 
+              alt="Low-fidelity wireframe" 
+              onClick={() => window.open(lowwireframe, '_blank')}
+            />
+            <p>Low-fidelity Wireframe</p>
           </div>
+        </div>
+        <p className="wireframe-description">
+          After validating the basic structure, I developed mid-fidelity wireframes to refine the layout and interactions.
+        </p>
+        <div className="wireframes">
           <div className="wireframe">
-            <div className="mock-image">
-              <div className="mock-image-placeholder">
-                <p className="mock-image-name">{mockImages.wireframe2.name}</p>
-                <p className="mock-image-size">{mockImages.wireframe2.size}</p>
-                <p className="mock-image-desc">{mockImages.wireframe2.description}</p>
-              </div>
-            </div>
-            <p>Club Details</p>
-          </div>
-          <div className="wireframe">
-            <div className="mock-image">
-              <div className="mock-image-placeholder">
-                <p className="mock-image-name">{mockImages.wireframe3.name}</p>
-                <p className="mock-image-size">{mockImages.wireframe3.size}</p>
-                <p className="mock-image-desc">{mockImages.wireframe3.description}</p>
-              </div>
-            </div>
-            <p>Event Calendar</p>
+            <img 
+              src={midwireframe} 
+              alt="Mid-fidelity wireframe" 
+              onClick={() => window.open(midwireframe, '_blank')}
+            />
+            <p>Mid-fidelity Wireframe</p>
           </div>
         </div>
       </section>
 
-      {/* Visual Design */}
+      {/* Iterations - ปรับ slider ให้ดูทันสมัยขึ้น */}
+      <section className="section">
+        <h2>Iterations</h2>
+        <p>
+          Through multiple iterations, I refined the design based on user feedback and testing results. 
+          Each iteration brought significant improvements to the user experience.
+        </p>
+        <div className="iterations-container">
+          <div className="iterations-slider">
+            <div className="iteration-slide">
+              <img 
+                src={Iteration1} 
+                alt="First iteration" 
+                className="iteration-image" 
+                onClick={() => window.open(Iteration1, '_blank')}
+              />
+              <p>Initial Design</p>
+            </div>
+            <div className="iteration-slide">
+              <img 
+                src={Iteration2} 
+                alt="Second iteration" 
+                className="iteration-image" 
+                onClick={() => window.open(Iteration2, '_blank')}
+              />
+              <p>Enhanced Features</p>
+            </div>
+            <div className="iteration-slide">
+              <img 
+                src={Iteration3} 
+                alt="Third iteration" 
+                className="iteration-image" 
+                onClick={() => window.open(Iteration3, '_blank')}
+              />
+              <p>User Testing Refinements</p>
+            </div>
+            <div className="iteration-slide">
+              <img 
+                src={Iteration4} 
+                alt="Final iteration" 
+                className="iteration-image" 
+                onClick={() => window.open(Iteration4, '_blank')}
+              />
+              <p>Final Design</p>
+            </div>
+          </div>
+          <div className="slider-controls">
+            <p className="slide-instruction">← Swipe to see different iterations →</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Visual Design - ปรับ grid layout ให้ดูสวยงามขึ้น */}
       <section className="section">
         <h2>Visual Design</h2>
         <p>
-          The visual design was inspired by Kasetsart University's brand colors and identity,
-          with a focus on creating a clean, modern interface that appeals to students.
+          The visual design system was crafted to ensure consistency and accessibility across the platform,
+          incorporating Kasetsart University's brand identity while maintaining a modern and user-friendly interface.
         </p>
-        <div className="design-elements">
-          <div className="element">
-            <h3>Color Palette</h3>
-            <div className="colors">
-              <div className="color" style={{ backgroundColor: '#006C3B' }}></div>
-              <div className="color" style={{ backgroundColor: '#E8B32F' }}></div>
-              <div className="color" style={{ backgroundColor: '#FFFFFF' }}></div>
-              <div className="color" style={{ backgroundColor: '#F5F5F5' }}></div>
-              <div className="color" style={{ backgroundColor: '#333333' }}></div>
-            </div>
+        <div className="visual-design-grid">
+          <div className="design-item">
+            <img 
+              src={color} 
+              alt="Color System" 
+              className="responsive-image" 
+              onClick={() => window.open(color, '_blank')}
+              style={{ cursor: 'pointer' }}
+            />
+            <h3>Color System</h3>
+            <p>Brand-aligned color palette optimized for accessibility</p>
           </div>
-          <div className="element">
+          <div className="design-item">
+            <img 
+              src={typography} 
+              alt="Typography System" 
+              className="responsive-image" 
+              onClick={() => window.open(typography, '_blank')}
+              style={{ cursor: 'pointer' }}
+            />
             <h3>Typography</h3>
-            <div className="typography">
-              <p className="font-heading">Heading: Montserrat Bold</p>
-              <p className="font-body">Body: Roboto Regular</p>
-            </div>
+            <p>Clear hierarchical type system for optimal readability</p>
+          </div>
+          <div className="design-item">
+            <img 
+              src={component} 
+              alt="Component Library" 
+              className="responsive-image" 
+              onClick={() => window.open(component, '_blank')}
+              style={{ cursor: 'pointer' }}
+            />
+            <h3>Components</h3>
+            <p>Reusable components ensuring consistent interactions</p>
+          </div>
+          <div className="design-item">
+            <img 
+              src={UIkits} 
+              alt="UI Kit Overview" 
+              className="responsive-image" 
+              onClick={() => window.open(UIkits, '_blank')}
+              style={{ cursor: 'pointer' }}
+            />
+            <h3>UI Kit</h3>
+            <p>Comprehensive design system for scalable development</p>
           </div>
         </div>
       </section>
 
-      {/* Final Design */}
+      {/* Final Design - เพิ่ม caption และปรับการแสดงผล */}
       <section className="section">
         <h2>Final Design</h2>
-        <div className="final-designs">
-          <div className="design">
-            <div className="mock-image">
-              <div className="mock-image-placeholder">
-                <p className="mock-image-name">{mockImages.final1.name}</p>
-                <p className="mock-image-size">{mockImages.final1.size}</p>
-                <p className="mock-image-desc">{mockImages.final1.description}</p>
-              </div>
-            </div>
-            <p>Club Listing Page</p>
-          </div>
-          <div className="design">
-            <div className="mock-image">
-              <div className="mock-image-placeholder">
-                <p className="mock-image-name">{mockImages.final2.name}</p>
-                <p className="mock-image-size">{mockImages.final2.size}</p>
-                <p className="mock-image-desc">{mockImages.final2.description}</p>
-              </div>
-            </div>
-            <p>Club Details Page</p>
-          </div>
-          <div className="design">
-            <div className="mock-image">
-              <div className="mock-image-placeholder">
-                <p className="mock-image-name">{mockImages.final3.name}</p>
-                <p className="mock-image-size">{mockImages.final3.size}</p>
-                <p className="mock-image-desc">{mockImages.final3.description}</p>
-              </div>
-            </div>
-            <p>Event Calendar</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Responsive Design */}
-      <section className="section">
-        <h2>Responsive Design</h2>
         <p>
-          The application was designed to work seamlessly across desktop, tablet, and mobile devices.
+          The final design delivers a clean, intuitive interface that makes it easy for students 
+          to discover and engage with university clubs. The platform successfully addresses the 
+          key challenges identified in our research while maintaining Kasetsart University's brand identity.
         </p>
-        <div className="responsive-designs">
-          <div className="responsive-design">
-            <div className="mock-image">
-              <div className="mock-image-placeholder">
-                <p className="mock-image-name">{mockImages.responsive1.name}</p>
-                <p className="mock-image-size">{mockImages.responsive1.size}</p>
-                <p className="mock-image-desc">{mockImages.responsive1.description}</p>
-              </div>
-            </div>
-            <p>Mobile View</p>
-          </div>
-          <div className="responsive-design">
-            <div className="mock-image">
-              <div className="mock-image-placeholder">
-                <p className="mock-image-name">{mockImages.responsive2.name}</p>
-                <p className="mock-image-size">{mockImages.responsive2.size}</p>
-                <p className="mock-image-desc">{mockImages.responsive2.description}</p>
-              </div>
-            </div>
-            <p>Tablet View</p>
+        <div className="final-design-showcase">
+          <img 
+            src={FinalDesign} 
+            alt="KU Clubs Final Design" 
+            className="showcase-image" 
+            onClick={() => window.open(FinalDesign, '_blank')}
+            style={{ cursor: 'pointer' }}
+          />
+          <p className="image-caption">Final High-Fidelity Design</p>
+        </div>
+
+        <div className="responsive-design">
+          <h3>Responsive Design</h3>
+          <p>
+            The design was optimized for mobile devices, ensuring a seamless experience 
+            across different screen sizes while maintaining the core functionality and visual hierarchy.
+          </p>
+          <div className="responsive-showcase">
+            <img 
+              src={responsive} 
+              alt="Mobile responsive design" 
+              className="responsive-image" 
+              onClick={() => window.open(responsive, '_blank')}
+              style={{ cursor: 'pointer' }}
+            />
+            <p className="image-caption">Mobile Responsive Design</p>
           </div>
         </div>
       </section>
 
-      {/* Outcomes */}
+      {/* Outcomes - ปรับ card design */}
       <section className="section">
         <h2>Outcomes & Learnings</h2>
         <div className="outcomes">
           <div className="outcome">
             <h3>User Satisfaction</h3>
             <p>
-              User testing showed a 90% satisfaction rate with the new design, with particular 
+              User testing showed a <span className="highlight">90% satisfaction rate</span> with the new design, with particular 
               appreciation for the intuitive navigation and comprehensive club information.
             </p>
           </div>
@@ -326,7 +328,7 @@ const KUClub = () => {
         </div>
       </section>
 
-      {/* Next Steps */}
+      {/* Next Steps - ปรับ list style */}
       <section className="section">
         <h2>Next Steps</h2>
         <ul className="next-steps">
@@ -336,6 +338,7 @@ const KUClub = () => {
           <li>Integrate with university calendar system</li>
         </ul>
       </section>
+      
     </div>
   );
 };

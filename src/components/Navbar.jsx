@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { useLocation } from 'react-router-dom';
@@ -7,6 +7,34 @@ const Navbar = ({ scrolled }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const isContactPage = location.pathname === '/contact';
+  const navRef = useRef(null);
+  const hamburgerRef = useRef(null);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuOpen && 
+          navRef.current && 
+          !navRef.current.contains(event.target) &&
+          hamburgerRef.current && 
+          !hamburgerRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [menuOpen]);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
 
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''} ${isContactPage ? 'navbar-fixed' : ''}`}>
@@ -14,7 +42,7 @@ const Navbar = ({ scrolled }) => {
         <div className="logo">
           <Link to="/">Yeepoon</Link>
         </div>
-        <nav className={menuOpen ? 'active' : ''}>
+        <nav className={menuOpen ? 'active' : ''} ref={navRef}>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/#projects">Projects</Link></li>
@@ -23,7 +51,11 @@ const Navbar = ({ scrolled }) => {
         </nav>
         <div 
           className={`hamburger ${menuOpen ? 'active' : ''}`} 
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setMenuOpen(!menuOpen);
+          }}
+          ref={hamburgerRef}
         >
           <span></span>
           <span></span>

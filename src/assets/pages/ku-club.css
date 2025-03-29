@@ -1,17 +1,18 @@
-/* Base variables */
+/* Base variables - ปรับสีตามที่ต้องการ */
 :root {
-  --primary-color: #006C3B;
-  --secondary-color: #E8B32F;
-  --text-color: #333333;
-  --bg-color: #FFFFFF;
-  --light-bg: #F5F5F5;
+  --primary-color: #905e02ed; /* Mustard */
+  --secondary-color: #FFE450; /* Yellow */
+  --text-color: #000000; /* Black */
+  --bg-color: #FFFFFF; /* White */
+  --light-bg: #FBF8EF; /* Light yellow */
+  --accent-color: #F3F4F6; /* Yellow pastel */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 3rem;
   --spacing-xl: 4rem;
   --border-radius: 0.5rem;
-  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   --transition: all 0.3s ease;
 }
 
@@ -23,7 +24,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
   line-height: 1.6;
@@ -33,10 +34,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   margin-bottom: var(--spacing-sm);
+  color: var(--text-color);
 }
 
 p {
   margin-bottom: var(--spacing-sm);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 ul {
@@ -50,138 +54,252 @@ ul {
   margin: 0 auto;
   padding: var(--spacing-md) var(--spacing-sm);
   width: 90%;
+  background-color: var(--bg-color);
 }
 
-/* Banner */
-.banner {
-  margin-bottom: var(--spacing-lg);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
-}
-
-/* Mock image placeholder */
-.mock-image {
-  background-color: var(--light-bg);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-}
-
-.mock-image-placeholder {
-  padding: var(--spacing-lg);
-  text-align: center;
-  border: 2px dashed #ccc;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.mock-image-name {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: var(--spacing-xs);
-}
-
-.mock-image-size {
-  color: #666;
-  margin-bottom: var(--spacing-xs);
-}
-
-.mock-image-desc {
-  font-style: italic;
-  color: #888;
-}
-
-/* Project header */
+/* Project Header */
 .project-header {
-  text-align: center;
   margin-bottom: var(--spacing-lg);
+  text-align: center;
 }
 
 .project-header h1 {
   font-size: 2.5rem;
-  color: var(--primary-color);
   margin-bottom: var(--spacing-sm);
+  color: var(--text-color);
 }
 
 .project-subtitle {
   font-size: 1.1rem;
-  max-width: 90%;
+  color: var(--text-color);
+  max-width: 700px;
   margin: 0 auto var(--spacing-md);
+  line-height: 1.6;
 }
 
-/* Project info */
+/* Project Info */
 .project-info {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
-  background-color: var(--light-bg);
+  background-color: transparent; /* เปลี่ยนจาก var(--light-bg) เป็น transparent */
   padding: var(--spacing-md);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
 
-.info-item {
-  flex: 1;
+/* Research Findings */
+.finding {
+  background-color: transparent; /* เปลี่ยนจาก var(--light-bg) เป็น transparent */
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
 }
 
+/* Iterations Slider - Responsive Improvements */
+.iterations-container {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+  overflow: hidden;
+  background-color: transparent; /* เปลี่ยนจาก var(--light-bg) เป็น transparent */
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+/* Outcomes */
+.outcome {
+  background-color: transparent; /* เปลี่ยนจาก var(--light-bg) เป็น transparent */
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border-left: 4px solid var(--primary-color);
+}
 .info-item h3 {
-  font-size: 1.2rem;
   color: var(--primary-color);
   margin-bottom: var(--spacing-xs);
+  font-weight: 600;
 }
 
 .tools-list {
-  display: flex;
+  display: inline; /* เปลี่ยนจาก flex เป็น inline เพื่อให้ tag ต่อเนื่องกันเป็นความเรียง */
   flex-wrap: wrap;
   gap: var(--spacing-xs);
 }
 
 .tool {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
+  display: inline-block;
+  background-color: transparent; /* เปลี่ยนจากสีพื้นหลังเป็น transparent */
+  color: var(--primary-color); /* เปลี่ยนสีตัวอักษรเป็นสีหลัก */
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600; /* เพิ่มความหนาของตัวอักษร */
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--primary-color); /* เพิ่มเส้นขอบแทนพื้นหลัง */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Sections */
+/* ลบการกำหนดสีพื้นหลังที่แตกต่างกัน */
+.tool:nth-child(2n),
+.tool:nth-child(3n),
+.tool:nth-child(4n) {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+}
+
+.tool:hover {
+  transform: translateY(-3px);
+  color: #8B4513; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
+}
+
+/* ปรับขนาดและการแสดงผลตาม breakpoints */
+@media (min-width: 768px) {
+  .tool {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+    margin-right: 0.7rem; /* เพิ่มระยะห่างด้านขวาสำหรับหน้าจอใหญ่ย */
+    margin-bottom: 0.7rem; /* เพิ่มระยะห่างด้านล่างสำหรับหน้าจอใหญ่ย */
+  }
+}
+
+/* Section styling */
 .section {
   margin-bottom: var(--spacing-xl);
 }
 
+/* ปรับสีหัวข้อให้เป็นสีเหลืองเข้มมากขึ้น */
 .section h2 {
   font-size: 1.8rem;
-  color: var(--primary-color);
   margin-bottom: var(--spacing-md);
   position: relative;
-  padding-bottom: var(--spacing-xs);
+  display: inline-block;
+  color: var(--primary-color); /* เปลี่ยนสีหัวข้อเป็นสีเหลือง */
+  font-weight: 700;
 }
 
-.section h2::after {
+.project-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary-color); /* เปลี่ยนสีหัวข้อหลักเป็นสีเหลือง */
+  font-weight: 800;
+}
+
+.responsive-design h3,
+.design-item h3,
+.outcome h3 {
+  color: var(--primary-color); /* เปลี่ยนสีหัวข้อย่อยเป็นสีเหลือง */
+  font-weight: 600;
+}
+
+.section h2:after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
   width: 60px;
   height: 3px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
-/* Problem list */
-.problem-list {
-  margin-left: var(--spacing-md);
+/* ปรับปรุงการแสดงผลของรูปภาพ */
+.responsive-image, 
+.showcase-image, 
+.iteration-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
-.problem-list li {
-  margin-bottom: var(--spacing-xs);
+/* Banner - ปรับปรุงให้ใหญ่ขึ้นและ responsive */
+/* แก้ไขส่วนที่มีปัญหาเกี่ยวกับ comment และการกำหนดค่าซ้ำซ้อน */
+/* Banner - ปรับปรุงให้ใหญ่ขึ้นและ responsive */
+.banner {
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  background: transparent; /* เปลี่ยนจาก var(--light-bg) เป็น transparent */
+  width: 100%;
 }
 
-/* Research findings */
+/* แก้ไขส่วนที่มีการกำหนดค่าซ้ำซ้อนสำหรับ iterations-container */
+.iterations-container {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+  overflow: hidden;
+  background-color: transparent; /* เปลี่ยนจาก var(--light-bg) เป็น transparent */
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+/* แก้ไขส่วนที่มีการกำหนดค่าซ้ำซ้อนสำหรับ finding */
+.finding {
+  background-color: transparent; /* เปลี่ยนจาก var(--light-bg) เป็น transparent */
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+/* แก้ไขส่วนที่มีการกำหนดค่าซ้ำซ้อนสำหรับ design-item */
+.design-item {
+  background-color: transparent; /* เปลี่ยนจาก var(--light-bg) เป็น transparent */
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+/* แก้ไขส่วนที่มีการกำหนดค่าซ้ำซ้อนสำหรับ outcome */
+.outcome {
+  background-color: transparent; /* เปลี่ยนจาก var(--light-bg) เป็น transparent */
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border-left: 4px solid var(--primary-color);
+}
+.banner img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ปรับขนาดตาม breakpoints */
+@media (min-width: 768px) {
+  .banner {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .banner img {
+    max-height: 500px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner img {
+    max-height: 600px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .banner img {
+    max-height: 700px;
+  }
+}
+
+/* Research Findings */
 .research-findings {
   display: flex;
   flex-direction: column;
@@ -192,139 +310,275 @@ ul {
 .finding {
   background-color: var(--light-bg);
   padding: var(--spacing-md);
-  border-radius: var(--border-radius);
+  border-radius: 50%; /* เปลี่ยนเป็นวงกลม */
   box-shadow: var(--box-shadow);
   text-align: center;
-}
-
-.finding h3 {
-  font-size: 2rem;
-  color: var(--primary-color);
-  margin-bottom: var(--spacing-xs);
-}
-
-/* Process steps */
-.process-steps {
+  width: 200px; /* กำหนดความกว้าง */
+  height: 200px; /* กำหนดความสูง */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
-}
-
-.process-step {
-  background-color: var(--light-bg);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  position: relative;
-}
-
-.step-number {
-  background-color: var(--primary-color);
-  color: white;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: bold;
+  align-items: center;
+  margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+}
+
+/* ปรับสีหัวข้อตัวเลขให้เป็นสีน้ำตาล */
+.finding h3 {
+  font-size: 2.5rem;
+  color: #8B4513;
   margin-bottom: var(--spacing-xs);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ปรับสีหัวข้อในส่วน Research Findings ให้เป็นสีน้ำตาล */
+.research-findings .finding h3 {
+  color: #b67d19;
+}
+
+.finding p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+/* ปรับการแสดงผลบน tablet และ desktop */
+@media (min-width: 768px) {
+  .research-findings {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .finding {
+    width: 180px;
+    height: 180px;
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .finding {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .finding h3 {
+    font-size: 3rem;
+  }
+  
+  .finding p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .finding {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .finding h3 {
+    font-size: 2rem;
+  }
+  
+  .finding p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Impact matrix */
+.impact-matrix {
+  margin: var(--spacing-md) 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  box-shadow: none;
 }
 
 /* Wireframes */
 .wireframes {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0;
 }
 
 .wireframe {
+  width: 100%;
   text-align: center;
+  margin-bottom: 2rem;
+}
+
+.wireframe img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.wireframe img:hover {
+  transform: scale(1.02);
 }
 
 .wireframe p {
-  margin-top: var(--spacing-xs);
+  margin-top: 1rem;
   font-weight: 500;
+  color: var(--text-color);
 }
 
-/* Design elements */
-.design-elements {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
+.wireframe-description {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.05rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.element {
+/* ยกเลิก media queries ที่ทำให้ wireframe เปลี่ยนเป็น row layout */
+@media (min-width: 768px) {
+  .wireframes {
+    flex-direction: column !important;
+  }
+  
+  .wireframe {
+    flex: none !important;
+    width: 100% !important;
+  }
+}
+
+/* Iterations Slider - Responsive Improvements */
+.iterations-container {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+  overflow: hidden;
   background-color: var(--light-bg);
   padding: var(--spacing-md);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
 }
 
-.colors {
+.iterations-slider {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-sm);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 2rem;
+  padding: 1rem 0.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.color {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: var(--box-shadow);
+.iterations-slider::-webkit-scrollbar {
+  display: none;
 }
 
-.typography {
-  margin-top: var(--spacing-sm);
-}
-
-.font-heading {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.font-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-}
-
-/* Final designs */
-.final-designs {
+.iteration-slide {
+  flex: 0 0 auto;
+  width: 90%;
+  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
+  align-items: center;
+  gap: 1rem;
 }
 
-.design {
-  text-align: center;
+.iteration-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: var(--box-shadow);
 }
 
-.design p {
-  margin-top: var(--spacing-xs);
+.iteration-image:hover {
+  transform: scale(1.02);
+}
+
+.iteration-slide p {
   font-weight: 500;
+  color: var(--text-color);
+  margin-top: 0.5rem;
 }
 
-/* Responsive designs */
-.responsive-designs {
+.slide-instruction {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* Visual Design */
+.visual-design-grid {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
+}
+
+.design-item {
+  background-color: transparent; /* เปลี่ยนจาก var(--light-bg) เป็น transparent */
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: none; /* ลบเงาออก */
+  transition: transform 0.3s ease;
+  width: 100%;
+  border: none; /* ลบเส้นขอบออก */
+}
+
+.design-item:hover {
+  transform: translateY(-5px);
+}
+
+.design-item h3 {
+  color: var(--primary-color);
+  margin: var(--spacing-sm) 0;
+}
+
+/* ยกเลิกการแสดงผลแบบ grid ในทุก breakpoint */
+@media (min-width: 768px) {
+  .visual-design-grid {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .visual-design-grid {
+    flex-direction: column;
+  }
+}
+
+.design-item h3 {
+  color: var(--primary-color);
+  margin: var(--spacing-sm) 0;
+}
+
+/* Final Design */
+.final-design-showcase {
+  margin: var(--spacing-md) 0;
 }
 
 .responsive-design {
-  text-align: center;
+  margin-top: var(--spacing-lg);
 }
 
-.responsive-design p {
-  margin-top: var(--spacing-xs);
-  font-weight: 500;
+.responsive-design h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.responsive-showcase {
+  margin-top: var(--spacing-md);
 }
 
 /* Outcomes */
@@ -340,6 +594,7 @@ ul {
   padding: var(--spacing-md);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  border-left: 4px solid var(--primary-color);
 }
 
 .outcome h3 {
@@ -350,20 +605,28 @@ ul {
 /* Next steps */
 .next-steps {
   margin-left: var(--spacing-md);
+  list-style-type: none;
 }
 
 .next-steps li {
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.next-steps li:before {
+  content: "•";
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -0.3rem;
 }
 
 /* Media queries for responsive design */
 @media (min-width: 480px) {
   .project-container {
     padding: var(--spacing-md) var(--spacing-md);
-  }
-  
-  .mock-image-placeholder {
-    min-height: 250px;
   }
 }
 
@@ -372,81 +635,39 @@ ul {
     padding: var(--spacing-lg) var(--spacing-lg);
     width: 85%;
   }
-  
+
   .project-header h1 {
     font-size: 3rem;
   }
-  
+
   .project-subtitle {
     font-size: 1.2rem;
     max-width: 80%;
   }
-  
+
   .project-info {
     flex-direction: row;
+    justify-content: space-between;
   }
-  
+
   .research-findings {
     flex-direction: row;
   }
-  
+
   .finding {
     flex: 1;
   }
   
-  .process-steps {
-    flex-direction: row;
+  .visual-design-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .process-step {
-    flex: 1;
-  }
-  
-  .wireframes {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .wireframe {
-    flex: 0 0 calc(50% - var(--spacing-md));
-  }
-  
-  .design-elements {
-    flex-direction: row;
-  }
-  
-  .element {
-    flex: 1;
-  }
-  
-  .final-designs {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .design {
-    flex: 0 0 calc(50% - var(--spacing-md));
-  }
-  
-  .responsive-designs {
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .responsive-design {
-    flex: 0 0 calc(50% - var(--spacing-md));
-  }
-  
+
   .outcomes {
     flex-direction: row;
   }
-  
+
   .outcome {
     flex: 1;
-  }
-  
-  .mock-image-placeholder {
-    min-height: 300px;
   }
 }
 
@@ -456,16 +677,8 @@ ul {
     width: 80%;
   }
   
-  .wireframe {
-    flex: 0 0 calc(33.333% - var(--spacing-md));
-  }
-  
-  .design {
-    flex: 0 0 calc(33.333% - var(--spacing-md));
-  }
-  
-  .mock-image-placeholder {
-    min-height: 350px;
+  .visual-design-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -477,8 +690,15 @@ ul {
 
 /* Animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section {

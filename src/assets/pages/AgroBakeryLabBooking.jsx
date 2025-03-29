@@ -1,5 +1,15 @@
 import React, { useEffect } from 'react';
 import './AgroBakeryLabBooking.css';
+import heroImage from '../images/agrobakery/BakeryBookingcover.png';
+import OldBusinessFlow from '../images/agrobakery/OldBusinessFlow.png';
+import NewBusinessFlow from '../images/agrobakery/NewBusinessFlow.png';
+import StudentWireframe from '../images/agrobakery/StudentWireframe.png';
+import ProfWireframe from '../images/agrobakery/ProfWireframe.png';
+import StaffWireframe from '../images/agrobakery/StaffWireframe.png';
+import UIstyleguide from '../images/agrobakery/UIstyleguide.png';
+import StudentUI from '../images/agrobakery/StudentUI.png';
+import ProfUI from '../images/agrobakery/ProfUI.png';
+import StaffUI from '../images/agrobakery/StaffUI.png';
 
 const AgroBakeryLabBooking = () => {
   useEffect(() => {
@@ -13,11 +23,7 @@ const AgroBakeryLabBooking = () => {
         <div className="hero-content">
           <h1>Agro Bakery Lab Booking System</h1>
           <p className="hero-subtitle">Streamlining lab reservations for Kasetsart University</p>
-          
-          {/* Hero Image Placeholder */}
-          <div className="hero-image-placeholder">
-            <p>Hero Image - Agro Bakery Lab Booking System</p>
-          </div>
+          <img src={heroImage} alt="Agro Bakery Hero" style={{ width: '100%', height: 'auto' }} />
         </div>
       </section>
 
@@ -42,6 +48,75 @@ const AgroBakeryLabBooking = () => {
           <div className="overview-description">
             <p>This project involved designing a booking system for a bakery lab at Kasetsart University, which allows students and staff to reserve time slots for using the lab facilities. The goal was to simplify the process and reduce the administrative burden on staff.</p>
           </div>
+        </div>
+      </section>
+
+      {/* Problem Statement - NEW SECTION */}
+      <section className="agrobakery-section problem-statement">
+        <h2>Problem Statement</h2>
+        <div className="problem-content">
+          <p>The existing booking system was inefficient, requiring manual approval from three professors, often leading to delays and miscommunication. Rejections were relayed indirectly through administrative staff, creating confusion. Additionally, approval criteria were inconsistent, relying on subjective judgment rather than clear guidelines, making the process unpredictable for students and staff.</p>
+        </div>
+      </section>
+
+      {/* Design Process */}
+      <section className="agrobakery-section design-process">
+        <h2>Design Process</h2>
+        
+        <div className="process-timeline">
+          <div className="process-step">
+            <div className="process-icon research"></div>
+            <h3>Research</h3>
+            <p>Conducted surveys and interviews with students and lab staff</p>
+          </div>
+          <div className="process-step">
+            <div className="process-icon wireframing"></div>
+            <h3>Wireframing</h3>
+            <p>Created low-fidelity wireframes to establish the system structure</p>
+          </div>
+          <div className="process-step">
+            <div className="process-icon prototyping"></div>
+            <h3>Prototyping</h3>
+            <p>Developed interactive prototypes for user testing</p>
+          </div>
+          <div className="process-step">
+            <div className="process-icon testing"></div>
+            <h3>Testing</h3>
+            <p>Conducted usability tests with potential users</p>
+          </div>
+          <div className="process-step">
+            <div className="process-icon final"></div>
+            <h3>Final Design</h3>
+            <p>Refined the UI based on feedback and created high-fidelity mockups</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Research & User Insights */}
+      <section className="agrobakery-section research">
+        <h2>Research & User Insights</h2>
+        
+        <p>To ensure that the new booking system meets the needs of the users, I conducted surveys and user research with students and staff to gather insights into their challenges with the old system and preferences for the new system.</p>
+        
+        <div className="business-flow-images">
+          <a href={OldBusinessFlow} target="_blank" rel="noopener noreferrer">
+            <img src={OldBusinessFlow} alt="Old Business Flow" className="flow-image" />
+            <p className="image-caption">Old Business Flow</p> 
+          </a>
+          <a href={NewBusinessFlow} target="_blank" rel="noopener noreferrer">
+            <img src={NewBusinessFlow} alt="New Business Flow" className="flow-image" />
+            <p className="image-caption">New Business Flow</p>
+          </a>
+        </div>
+        
+        <div className="key-findings">
+          <h3>Key Findings</h3>
+          <ul className="findings-list">
+            <li>Users prefer simplicity and ease of use</li>
+            <li>They want to check availability and book slots quickly</li>
+            <li>Automatic reminders are essential to ensure bookings are not forgotten</li>
+            <li>Admin staff need a comprehensive dashboard to manage all bookings</li>
+          </ul>
         </div>
       </section>
 
@@ -101,7 +176,7 @@ const AgroBakeryLabBooking = () => {
         
         {/* Business Flow Diagram Placeholder */}
         <div className="flow-diagram-placeholder">
-          <p>Business Flow Comparison Diagram</p>
+          <p>agrobakery-flow-diagram.png (1200x600px)</p>
         </div>
       </section>
 
@@ -144,61 +219,6 @@ const AgroBakeryLabBooking = () => {
         </div>
       </section>
 
-      {/* Research & User Insights */}
-      <section className="agrobakery-section research">
-        <h2>Research & User Insights</h2>
-        
-        <p>To ensure that the new booking system meets the needs of the users, I conducted surveys and user research with students and staff to gather insights into their challenges with the old system and preferences for the new system.</p>
-        
-        {/* Research Image Placeholder */}
-        <div className="research-image-placeholder">
-          <p>User Research Findings</p>
-        </div>
-        
-        <div className="key-findings">
-          <h3>Key Findings</h3>
-          <ul className="findings-list">
-            <li>Users prefer simplicity and ease of use</li>
-            <li>They want to check availability and book slots quickly</li>
-            <li>Automatic reminders are essential to ensure bookings are not forgotten</li>
-            <li>Admin staff need a comprehensive dashboard to manage all bookings</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Design Process */}
-      <section className="agrobakery-section design-process">
-        <h2>Design Process</h2>
-        
-        <div className="process-timeline">
-          <div className="process-step">
-            <div className="process-icon research"></div>
-            <h3>Research</h3>
-            <p>Conducted surveys and interviews with students and lab staff</p>
-          </div>
-          <div className="process-step">
-            <div className="process-icon wireframing"></div>
-            <h3>Wireframing</h3>
-            <p>Created low-fidelity wireframes to establish the system structure</p>
-          </div>
-          <div className="process-step">
-            <div className="process-icon prototyping"></div>
-            <h3>Prototyping</h3>
-            <p>Developed interactive prototypes for user testing</p>
-          </div>
-          <div className="process-step">
-            <div className="process-icon testing"></div>
-            <h3>Testing</h3>
-            <p>Conducted usability tests with potential users</p>
-          </div>
-          <div className="process-step">
-            <div className="process-icon final"></div>
-            <h3>Final Design</h3>
-            <p>Refined the UI based on feedback and created high-fidelity mockups</p>
-          </div>
-        </div>
-      </section>
-
       {/* Wireframes */}
       <section className="agrobakery-section wireframes">
         <h2>Wireframes & Prototyping</h2>
@@ -206,17 +226,23 @@ const AgroBakeryLabBooking = () => {
         <p>Based on the insights gathered, I designed wireframes and created prototypes to visualize the user journey.</p>
         
         <div className="wireframes-grid">
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Home Screen</p>
+          <div className="wireframe-item">
+            <a href={StudentWireframe} target="_blank" rel="noopener noreferrer">
+              <img src={StudentWireframe} alt="Student Wireframe" className="wireframe-image" />
+              <p className="image-caption">Student Wireframe</p>
+            </a>
           </div>
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Booking Calendar</p>
+          <div className="wireframe-item">
+            <a href={ProfWireframe} target="_blank" rel="noopener noreferrer">
+              <img src={ProfWireframe} alt="Professor Wireframe" className="wireframe-image" />
+              <p className="image-caption">Professor Wireframe</p>
+            </a>
           </div>
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Confirmation</p>
-          </div>
-          <div className="wireframe-placeholder">
-            <p>Wireframe - Admin Dashboard</p>
+          <div className="wireframe-item">
+            <a href={StaffWireframe} target="_blank" rel="noopener noreferrer">
+              <img src={StaffWireframe} alt="Staff Wireframe" className="wireframe-image" />
+              <p className="image-caption">Staff Wireframe</p>
+            </a>
           </div>
         </div>
         
@@ -231,41 +257,46 @@ const AgroBakeryLabBooking = () => {
         </div>
       </section>
 
+      {/* UI Style Guide - SIMPLIFIED SECTION */}
+      <section className="agrobakery-section style-guide">
+        <h2>UI Style Guide</h2>
+        
+        <p>I developed a consistent style guide to ensure the interface is cohesive, accessible, and aligns with the university's brand identity.</p>
+        
+        <div className="style-guide-content">
+          <div className="ui-item">
+            <a href={UIstyleguide} target="_blank" rel="noopener noreferrer">
+              <img src={UIstyleguide} alt="UI Style Guide" className="ui-image" />
+              <p className="image-caption">UI Style Guide</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Final UI Design */}
       <section className="agrobakery-section final-design">
         <h2>Final UI Design</h2>
         
-        <div className="design-elements">
-          <div className="color-palette">
-            <h3>Color Scheme</h3>
-            <div className="colors">
-              <div className="color-item" style={{ backgroundColor: '#E57F9E' }}><span>Pink</span></div>
-              <div className="color-item" style={{ backgroundColor: '#A0A0A0' }}><span>Gray</span></div>
-              <div className="color-item" style={{ backgroundColor: '#7FB77E' }}><span>Green</span></div>
-              <div className="color-item" style={{ backgroundColor: '#F9F9F9' }}><span>Light Gray</span></div>
-              <div className="color-item" style={{ backgroundColor: '#333333' }}><span>Dark Gray</span></div>
-            </div>
-          </div>
-        </div>
+        <p>After multiple iterations and user testing, I created the final UI designs that address all the identified pain points and incorporate user feedback.</p>
         
         <div className="final-screens">
-          <div className="screen-placeholder">
-            <p>Home Screen</p>
+          <div className="ui-item">
+            <a href={StudentUI} target="_blank" rel="noopener noreferrer">
+              <img src={StudentUI} alt="Student UI Design" className="ui-image" />
+              <p className="image-caption">Student Interface</p>
+            </a>
           </div>
-          <div className="screen-placeholder">
-            <p>Booking Calendar</p>
+          <div className="ui-item">
+            <a href={ProfUI} target="_blank" rel="noopener noreferrer">
+              <img src={ProfUI} alt="Professor UI Design" className="ui-image" />
+              <p className="image-caption">Professor Interface</p>
+            </a>
           </div>
-          <div className="screen-placeholder">
-            <p>Booking Confirmation</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>User Profile</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Admin Dashboard</p>
-          </div>
-          <div className="screen-placeholder">
-            <p>Mobile View</p>
+          <div className="ui-item">
+            <a href={StaffUI} target="_blank" rel="noopener noreferrer">
+              <img src={StaffUI} alt="Staff UI Design" className="ui-image" />
+              <p className="image-caption">Staff Admin Interface</p>
+            </a>
           </div>
         </div>
       </section>

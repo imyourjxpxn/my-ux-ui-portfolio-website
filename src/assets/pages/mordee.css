@@ -26,12 +26,27 @@
 
 /* Hero Section */
 .mordee-hero {
-  background: linear-gradient(135deg, #4ECDC4 0%, #1A535C 100%);
-  color: white;
+  background: linear-gradient(135deg, #4ECDC4 0%, #1A535C 100%); /* Ensure this gradient is correct */
+  color: white; /* Ensure text color is white */
   padding: 6rem 2rem;
   text-align: center;
   position: relative;
   border-radius: 0 0 30px 30px;
+}
+
+.mordee-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white; /* Ensure h1 text is white */
+}
+
+.mordee-hero .hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  color: white; /* Ensure subtitle text is white */
 }
 
 .hero-content {
@@ -43,6 +58,10 @@
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+.mordee-hero .hero-subtitle {
+  color: white; /* Change subtitle text to white */
 }
 
 .hero-subtitle {
@@ -401,10 +420,24 @@ blockquote:before {
 }
 
 /* Visual Design */
-.design-elements {
+.visual-images {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the images */
+  gap: 20px; /* Add some space between images */
+}
+
+.visual-images a {
+  display: flex;
+  justify-content: center; /* Center the image within the link */
+  width: 48%;
+}
+
+.visual-images img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
 .color-palette {
@@ -645,5 +678,24 @@ blockquote:before {
     margin-top: 0;
     display: flex;
     justify-content: center;
+  }
+}
+
+.iteration-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.responsive-iteration-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add some styling */
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 767px) {
+  .iteration-image-container {
+    padding: 0 1rem; /* Add some padding for smaller screens */
   }
 }

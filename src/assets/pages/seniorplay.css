@@ -173,6 +173,37 @@
 }
 
 /* Achievement Section */
+.seniorplay-section.achievement {
+  text-align: center; /* Center the entire section content */
+}
+
+/* Achievement Section Heading */
+.seniorplay-section.achievement h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-deep-purple);
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.seniorplay-section.achievement h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100px;
+  height: 3px;
+  background-color: var(--primary-purple);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .seniorplay-section.achievement h2 {
+    font-size: 2rem;
+  }
+}
+
 .achievement-content {
   display: flex;
   flex-direction: column;
@@ -289,28 +320,45 @@
 
 /* UI Style Guide */
 .style-guide-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   margin: 2rem 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .style-guide-container img {
   width: 100%;
+  max-width: 800px;
   height: auto;
   display: block;
   margin: 0 auto;
-}
-
-.style-guide-image {
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
+.style-guide-container a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .style-guide-image:hover {
   transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .style-guide-container {
+    padding: 0 1rem;
+  }
+  
+  .style-guide-container img {
+    max-width: 100%;
+  }
 }
 
 .style-guide-placeholder {
@@ -330,7 +378,103 @@
     grid-template-columns: 1fr;
   }
 }
-ห้
+
+/* User Persona Styles */
+.persona-heading {
+  margin-top: 2.5rem;
+  color: #561368;
+  font-size: 1.5rem;
+}
+
+.persona-container {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.persona-thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.persona-thumb {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.persona-thumb.active {
+  border-color: #8B5CF6;
+  transform: scale(1.05);
+}
+
+.persona-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.persona-display {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  min-height: 300px;
+}
+
+.persona-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.persona-image.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.persona-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .persona-thumb {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .persona-display {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .persona-thumbnails {
+    gap: 10px;
+  }
+  
+  .persona-thumb {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 /* Slide Instruction */
 .slide-instruction {
   text-align: center;
@@ -358,5 +502,47 @@
   .slide-instruction {
     font-size: 0.9rem;
     padding: 6px 12px;
+  }
+}
+
+/* Solution Section */
+.seniorplay-section.solution {
+  text-align: center; /* Center the text */
+  padding: 2rem 0;
+}
+
+.solution-features {
+  display: flex;
+  flex-direction: column; /* Stack features vertically */
+  align-items: center; /* Center align items */
+  gap: 2rem; /* Add space between feature cards */
+}
+
+.feature-card {
+  max-width: 600px; /* Limit the width of feature cards */
+  text-align: center; /* Center text within feature cards */
+}
+
+/* General Section Styling */
+.seniorplay-section {
+  padding: 4rem 2rem; /* Increase padding for more space */
+  margin-bottom: 3rem; /* Add margin to separate sections */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .seniorplay-section {
+    padding: 3rem 1.5rem; /* Adjust padding for smaller screens */
+    margin-bottom: 2rem; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .seniorplay-section {
+    padding: 2rem 1rem; /* Further adjust padding for very small screens */
+    margin-bottom: 1.5rem; /* Further adjust margin for very small screens */
   }
 }

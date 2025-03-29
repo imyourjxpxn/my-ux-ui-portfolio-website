@@ -14,7 +14,7 @@ const Projects = () => {
       title: "KU Club",
       category: "Web app",
       image: "/src/assets/project1.png",
-      link: "/ku-club",
+      link: "/ku-club",  // Changed from /kuclubs
       tags: ["UX/UI", "Web App"]
     },
     {
@@ -38,7 +38,7 @@ const Projects = () => {
       title: "Agro Bakery Lab Booking",
       category: "Website",
       image: "/src/assets/project4.png",
-      link: "/agrobakery",
+      link: "/agrobakery",  // Changed from /bakerylabbooking
       tags: ["Frontend", "Website"]
     }
   ];

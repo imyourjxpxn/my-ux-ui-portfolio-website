@@ -174,10 +174,7 @@ const AgroBakeryLabBooking = () => {
           </div>
         </div>
         
-        {/* Business Flow Diagram Placeholder */}
-        <div className="flow-diagram-placeholder">
-          <p>agrobakery-flow-diagram.png (1200x600px)</p>
-        </div>
+        {/* Remove this placeholder */}
       </section>
 
       {/* Pain Points & Solutions */}
@@ -261,7 +258,7 @@ const AgroBakeryLabBooking = () => {
       <section className="agrobakery-section style-guide">
         <h2>UI Style Guide</h2>
         
-        <p>I developed a consistent style guide to ensure the interface is cohesive, accessible, and aligns with the university's brand identity.</p>
+        <p>I developed a consistent style guide to ensure the interface is cohesive, accessible, and aligns with the Agro industry of KU brand identity.</p>
         
         <div className="style-guide-content">
           <div className="ui-item">
@@ -309,7 +306,7 @@ const AgroBakeryLabBooking = () => {
           <div className="impact-improvements">
             <h3>What Improved</h3>
             <ul className="improvements-list">
-              <li>Efficiency: Streamlined the booking process for students and staff</li>
+              <li>Efficiency: Streamlined the booking process for students ,staff and professor</li>
               <li>Accuracy: Reduced errors from manual entries and misunderstandings</li>
               <li>User Satisfaction: Users can now book and manage lab time independently</li>
               <li>Resource Utilization: Better tracking led to improved lab usage efficiency</li>
@@ -319,8 +316,8 @@ const AgroBakeryLabBooking = () => {
           <div className="impact-learnings">
             <h3>What I Learned</h3>
             <ul className="learnings-list">
-              <li>The importance of understanding existing workflows before redesigning</li>
-              <li>How to balance the needs of different user groups (students vs. admin staff)</li>
+              <li>The importance of understanding existing workflows before designing</li>
+              <li>How to balance the needs of different user groups (students vs. admin staff vs. professor)</li>
               <li>The value of iterative testing in creating intuitive booking interfaces</li>
             </ul>
           </div>

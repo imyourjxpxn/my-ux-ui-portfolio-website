@@ -492,9 +492,16 @@
   margin-top: 2rem;
 }
 
+/* UI Style Guide Section */
+.style-guide-content {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
 .ui-item {
-  width: 100%;
   max-width: 800px;
+  width: 100%;
   text-align: center;
 }
 
@@ -506,15 +513,15 @@
   transition: transform 0.3s ease;
 }
 
-.ui-item a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
 .ui-item a:hover .ui-image {
   transform: scale(1.02);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image-caption {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--neutral-dark);
 }
 
 .screen-placeholder {

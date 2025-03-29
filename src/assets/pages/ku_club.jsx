@@ -48,18 +48,19 @@ const KUClub = () => {
       <div className="project-info">
         <div className="info-item">
           <h3>Role</h3>
-          <p>UX/UI Designer</p>
+          <p>UX/UI Designer and Frontend developer</p>
         </div>
         <div className="info-item">
           <h3>Timeline</h3>
-          <p>4 weeks</p>
+          <p>Feb,2025- March 2025</p>
         </div>
         <div className="info-item">
           <h3>Tools</h3>
           <p className="tools-paragraph">
             <span className="tool">Figma</span>
-            <span className="tool">Adobe XD</span>
-            <span className="tool">Miro</span>
+            <span className="tool">Next.js</span>
+            <span className="tool">TailwindCss</span>
+            <span className="tool">ClickUp</span>
           </p>
         </div>
       </div>
@@ -92,20 +93,20 @@ const KUClub = () => {
       <section className="section">
         <h2>Research</h2>
         <p>
-          I conducted user interviews with 5 students to understand their experiences with 
+          I conducted user depth interviews with 5 students to understand their experiences with 
           university clubs. Key findings included:
         </p>
         <div className="research-findings">
           <div className="finding">
-            <h3>80%</h3>
+            <h3>4/5</h3>
             <p>of students found it difficult to discover new clubs</p>
           </div>
           <div className="finding">
-            <h3>65%</h3>
+            <h3>3/5</h3>
             <p>missed events because they weren't aware of them</p>
           </div>
           <div className="finding">
-            <h3>90%</h3>
+            <h3>100%</h3>
             <p>wanted a single platform for all club information</p>
           </div>
         </div>
@@ -178,7 +179,7 @@ const KUClub = () => {
                 className="iteration-image" 
                 onClick={() => window.open(Iteration1, '_blank')}
               />
-              <p>Initial Design</p>
+              <p>Upcoming Eventx</p>
             </div>
             <div className="iteration-slide">
               <img 
@@ -187,7 +188,7 @@ const KUClub = () => {
                 className="iteration-image" 
                 onClick={() => window.open(Iteration2, '_blank')}
               />
-              <p>Enhanced Features</p>
+              <p>Fast Register</p>
             </div>
             <div className="iteration-slide">
               <img 
@@ -196,7 +197,7 @@ const KUClub = () => {
                 className="iteration-image" 
                 onClick={() => window.open(Iteration3, '_blank')}
               />
-              <p>User Testing Refinements</p>
+              <p>Data Summary from Past Events</p>
             </div>
             <div className="iteration-slide">
               <img 
@@ -205,7 +206,7 @@ const KUClub = () => {
                 className="iteration-image" 
                 onClick={() => window.open(Iteration4, '_blank')}
               />
-              <p>Final Design</p>
+              <p>Favorite Club</p>
             </div>
           </div>
           <div className="slider-controls">
@@ -218,8 +219,11 @@ const KUClub = () => {
       <section className="section">
         <h2>Visual Design</h2>
         <p>
-          The visual design system was crafted to ensure consistency and accessibility across the platform,
-          incorporating Kasetsart University's brand identity while maintaining a modern and user-friendly interface.
+          The visual design system was crafted to embody the essence of KU Club—not just as a platform but
+          as a community for the "human duck" spirit: curious, adaptable, and always eager to learn.
+          Instead of adhering to Kasetsart University’s official colors, the design embraces a bold yellow,
+          symbolizing enthusiasm and versatility. The duck-themed elements reinforce the idea of students
+          exploring diverse interests, while the modern and user-friendly interface ensures an engaging and inclusive experience.
         </p>
         <div className="visual-design-grid">
           <div className="design-item">
@@ -231,7 +235,8 @@ const KUClub = () => {
               style={{ cursor: 'pointer' }}
             />
             <h3>Color System</h3>
-            <p>Brand-aligned color palette optimized for accessibility</p>
+            <p>Brand-aligned color palette optimized for accessibility.  The colors reflect the platform’s energetic and inclusive nature while
+              maintaining readability and usability across all interfaces.</p>
           </div>
           <div className="design-item">
             <img 
@@ -273,9 +278,8 @@ const KUClub = () => {
       <section className="section">
         <h2>Final Design</h2>
         <p>
-          The final design delivers a clean, intuitive interface that makes it easy for students 
-          to discover and engage with university clubs. The platform successfully addresses the 
-          key challenges identified in our research while maintaining Kasetsart University's brand identity.
+          The final design presents a clean, intuitive interface that enables students to effortlessly explore and engage with university clubs.
+          It effectively addresses the key challenges identified through research while embracing the spirit of Kasetsart University in a fresh and dynamic way.
         </p>
         <div className="final-design-showcase">
           <img 
@@ -314,7 +318,7 @@ const KUClub = () => {
           <div className="outcome">
             <h3>User Satisfaction</h3>
             <p>
-              User testing showed a <span className="highlight">90% satisfaction rate</span> with the new design, with particular 
+              User testing showed a <span className="highlight">80% satisfaction rate</span> with the new design, with particular 
               appreciation for the intuitive navigation and comprehensive club information.
             </p>
           </div>

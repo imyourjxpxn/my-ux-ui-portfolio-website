@@ -9,6 +9,7 @@ import typography from '../images/mordee/typography.png';
 import color from '../images/mordee/color.png';
 import component from '../images/mordee/component.png';
 import UIkits from '../images/mordee/UIkits.png';
+import Iteration from '../images/mordee/Iteration.png';
 
 const Mordee = () => {
   useEffect(() => {
@@ -20,8 +21,8 @@ const Mordee = () => {
       {/* Hero Section */}
       <div className="mordee-hero">
         <div className="hero-content">
-          <h1>Mordee</h1>
-          <p className="hero-subtitle">Telemedicine Application for NCD Patients</p>
+          <h1 style={{ color: 'white' }}>Mordee</h1>
+          <p className="hero-subtitle" style={{ color: 'white' }}>Telemedicine Application for NCD Patients</p>
           <img src={mainAppScreenshot} alt="Main App Screenshot" />
         </div>
       </div>
@@ -74,16 +75,16 @@ const Mordee = () => {
               </div>
               <div className="flow-step">
                 <div className="step-number">5</div>
-                <p>Patient may forget follow-ups or have difficulty managing medications</p>
+                <p>Patient may struggle with medication adherence or miss follow-ups, leading to potential health risks.</p>
               </div>
             </div>
           </div>
           <div className="flow-column mordee">
-            <h3>After <span>(Mordee's Telemedicine Feature)</span></h3>
+            <h3>After <span>(Enhanced Telemedicine with NCD Tracking)</span></h3>
             <div className="flow-steps">
               <div className="flow-step">
                 <div className="step-number">1</div>
-                <p>Patient logs into Mordee app and books an online consultation</p>
+                <p>Patient logs into the Mordee app and books an online consultation</p>
               </div>
               <div className="flow-step">
                 <div className="step-number">2</div>
@@ -95,11 +96,11 @@ const Mordee = () => {
               </div>
               <div className="flow-step">
                 <div className="step-number">4</div>
-                <p>Tracks symptoms and health data in the app</p>
+                <p>Tracks NCD-related health metrics (blood pressure, blood sugar, cholesterol) within the app.</p>
               </div>
               <div className="flow-step">
                 <div className="step-number">5</div>
-                <p>Gets follow-up reminders & rebooks consultations seamlessly</p>
+                <p>Gets smart alerts for worsening symptoms, prompting urgent consultations if necessary.</p>
               </div>
             </div>
           </div>
@@ -110,17 +111,19 @@ const Mordee = () => {
       {/* Wireframes */}
       <section className="mordee-section wireframes">
         <h2>Wireframes & Iterations</h2>
-        <p>Initial sketches focused on simplifying the booking process and integrating reminders. Feedback showed users needed clearer medication tracking and symptom logging.</p>
+        <p>The initial sketches focused on streamlining the booking process and integrating medication reminders for better adherence. However, user feedback revealed a strong need for clearer health tracking and symptom logging, especially for chronic conditions like diabetes, hypertension, and cholesterol management.</p>
         <div className="wireframes-grid">
           <img src={wireframe} alt="Wireframe - Home Screen" style={{ width: '100%', height: 'auto' }} />
         </div>
         <div className="iterations">
           <h3>Key Iterations After Usability Testing</h3>
           <ul className="iteration-list">
-            <li>Improved navigation flow to reduce user confusion</li>
-            <li>Added a daily health tracker for NCD patients</li>
-            <li>Enhanced visual hierarchy for medication alerts</li>
+            <li>Optimized Data Visualization for Blood Pressure – Instead of using two separate graphs for systolic and diastolic values (which made it hard to interpret), we redesigned it into a single, clear visual representation that effectively conveys changes in blood pressure.</li>
+            <li>Enhanced Medication Alerts – Improved the visual hierarchy by introducing color-coded urgency levels and simplified UI components to ensure that users never miss their medication reminders.</li>
           </ul>
+          <div className="iteration-image-container">
+            <img src={Iteration} alt="Iteration Example" className="responsive-iteration-image" />
+          </div>
         </div>
       </section>
 

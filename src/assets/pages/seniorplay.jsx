@@ -1,16 +1,53 @@
 import React, { useEffect } from 'react';
 import './seniorplay.css';
 import main from '../images/seniorplay/main.png';
-import Assumption_map from '../images/seniorplay/Assumption_map.png';
+
+const assumptionMapPath = '/images/seniorplay/assumtionMap.png';
 import Marketfit from '../images/seniorplay/Marketfit.png'; 
 import wireframe from '../images/seniorplay/wireframe.png'; 
 import Styleguide from '../images/seniorplay/Styleguide.png';
-import UIkits from '../images/seniorplay/UI.png'; // Updated import
-// Removed import for UI
+import UIkits from '../images/seniorplay/UI.png'; 
+import persona1 from '../images/seniorplay/Persona1.png'; 
+import persona2 from '../images/seniorplay/Persona2.png'; 
+import persona3 from '../images/seniorplay/Persona3.png'; 
+import persona4 from '../images/seniorplay/Persona4.png'; 
 
 const SeniorPlay = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Add persona selector functionality
+    const personaThumbs = document.querySelectorAll('.persona-thumb');
+    const personaImages = document.querySelectorAll('.persona-image');
+    
+    if (personaThumbs.length > 0 && personaImages.length > 0) {
+      personaThumbs.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          // Remove active class from all thumbnails and images
+          personaThumbs.forEach(t => t.classList.remove('active'));
+          personaImages.forEach(img => img.classList.remove('active'));
+          
+          // Add active class to clicked thumbnail
+          thumb.classList.add('active');
+          
+          // Show corresponding image
+          const personaNumber = thumb.getAttribute('data-persona');
+          document.getElementById(`persona-image-${personaNumber}`).classList.add('active');
+        });
+      });
+      
+      // Set first thumbnail as active by default
+      personaThumbs[0].classList.add('active');
+    }
+    
+    // Cleanup event listeners on component unmount
+    return () => {
+      if (personaThumbs.length > 0) {
+        personaThumbs.forEach(thumb => {
+          thumb.removeEventListener('click', () => {});
+        });
+      }
+    };
   }, []);
 
   return (
@@ -18,8 +55,8 @@ const SeniorPlay = () => {
       {/* Hero Section - Using Primary Colors #8B5CF6, #561368, #DFD5F6 */}
       <div className="seniorplay-hero">
         <div className="hero-content">
-          <h1>Senior<span>Play</span></h1>
-          <p className="hero-subtitle">A Fun & Engaging Game App for Seniors</p>
+          <h1 style={{ color: '#561368' }}>Senior<span>Play</span></h1> 
+          {/* Removed hero subtitle */}
           <img src={main} alt="SeniorPlay Hero" style={{ width: '100%', height: 'auto' }} />
         </div>
       </div>
@@ -29,18 +66,19 @@ const SeniorPlay = () => {
         <div className="details-grid">
           <div className="detail-card">
             <h3>Role</h3>
-            <p>UX/UI Designer</p>
+            <p>UX/UI Designer,Marketing</p>
           </div>
           <div className="detail-card">
             <h3>Timeline</h3>
+            <p>May,2024 (3 days)</p>
             <p>KU Startup Bootcamp</p>
           </div>
           <div className="detail-card">
             <h3>Tools</h3>
             <div className="tools-list">
               <span>Figma</span>
-              <span>Google Forms</span>
-              <span>Miro</span>
+              <span>Figjam</span>
+              <span>AI search</span>
             </div>
           </div>
         </div>
@@ -92,7 +130,7 @@ const SeniorPlay = () => {
             <blockquote>
               "I love playing games, but most of them are too fast for me."
             </blockquote>
-            <p className="quote-attribution">— Senior, 72</p>
+            <p className="quote-attribution">— Senior, 63</p>
           </div>
         </div>
         {/* Removed User Pain Points and Image */}
@@ -104,7 +142,24 @@ const SeniorPlay = () => {
         <p>For this project, we took a unique approach to understanding the needs of elderly users by performing Assumption Mapping. We hypothesized the potential pain points and needs that seniors might face while engaging with mobile apps, specifically in the context of gaming and cognitive engagement. This method allowed us to form educated assumptions about how the target audience would interact with a game app and what challenges they might encounter.</p>
         
         <div className="research-image-container">
-          <img src={Assumption_map} alt="Assumption Mapping" style={{ width: '100%', height: 'auto' }} />
+          <img 
+            src={assumptionMapPath}
+            alt="Assumption Mapping" 
+            style={{ 
+              width: '100%', 
+              maxWidth: '800px', 
+              height: 'auto',
+              margin: '0 auto',
+              display: 'block',
+              objectFit: 'contain',
+              border: '1px solid #eee'
+            }} 
+            loading="lazy"
+            onError={(e) => {
+              console.error('Image failed to load:', e);
+              e.target.src = 'https://via.placeholder.com/800x500?text=Assumption+Mapping';
+            }}
+          />
         </div>
         
         <p>Through Assumption Mapping, we identified key areas to focus on:</p>
@@ -118,6 +173,42 @@ const SeniorPlay = () => {
         
         <div className="market-analysis-container">
           <img src={Marketfit} alt="Market Fit Analysis" style={{ width: '100%', height: 'auto' }} />
+        </div>
+        
+        {/* เพิ่ม User Persona Section */}
+        <h3 className="persona-heading">User Personas</h3>
+        <p>We studied and created User Personas from interviews with elderly relatives of our team members and seniors in our community who play games, to better understand their needs and challenges when using technology.</p>
+        
+        <div className="persona-container">
+          <div className="persona-thumbnails">
+            <div className="persona-thumb" data-persona="1">
+              <img src={persona1} alt="Persona 1 thumbnail" />
+            </div>
+            <div className="persona-thumb" data-persona="2">
+              <img src={persona2} alt="Persona 2 thumbnail" />
+            </div>
+            <div className="persona-thumb" data-persona="3">
+              <img src={persona3} alt="Persona 3 thumbnail" />
+            </div>
+            <div className="persona-thumb" data-persona="4">
+              <img src={persona4} alt="Persona 4 thumbnail" />
+            </div>
+          </div>
+          
+          <div className="persona-display">
+            <div className="persona-image active" id="persona-image-1">
+              <img src={persona1} alt="Persona 1 full view" />
+            </div>
+            <div className="persona-image" id="persona-image-2">
+              <img src={persona2} alt="Persona 2 full view" />
+            </div>
+            <div className="persona-image" id="persona-image-3">
+              <img src={persona3} alt="Persona 3 full view" />
+            </div>
+            <div className="persona-image" id="persona-image-4">
+              <img src={persona4} alt="Persona 4 full view" />
+            </div>
+          </div>
         </div>
         
       </section>

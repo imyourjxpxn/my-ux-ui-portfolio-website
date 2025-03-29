@@ -13,33 +13,33 @@ const Projects = () => {
       id: 1,
       title: "KU Club",
       category: "Web app",
-      image: "/src/assets/project1.png",
-      link: "/ku-club",  // Changed from /kuclubs
-      tags: ["UX/UI", "Web App"]
+      image: "/assets/images/ku-club/project1.png",
+      link: "/ku-club",
+      tags: ["UX/UI+Frontend", "Website","DevOps project"]
     },
     {
       id: 2,
       title: "Mordee",
       category: "Mobile app",
-      image: "/src/assets/project2.png",
+      image: "/assets/images/mordee/project2.png",
       link: "/mordee",
-      tags: ["UX/UI", "Mobile App"]
+      tags: ["UX/UI", "Mobile App","Hackathon"]
     },
     {
       id: 3,
       title: "SeniorPlay",
       category: "Mobile app",
-      image: "/src/assets/project3.png",
+      image: "/assets/images/seniorplay/project3.png",
       link: "/seniorplay",
-      tags: ["UX/UI", "Mobile App", "Hackathon"]
+      tags: ["UX/UI", "Mobile App", "StartUpBootcamp"]
     }, 
     {
       id: 4,
       title: "Agro Bakery Lab Booking",
       category: "Website",
-      image: "/src/assets/project4.png",
-      link: "/agrobakery",  // Changed from /bakerylabbooking
-      tags: ["Frontend", "Website"]
+      image: "/assets/images/Agrobakery/project4.png",
+      link: "/agrobakery",
+      tags: ["UX/UI+SA", "Website","SA project"]
     }
   ];
 
@@ -125,7 +125,7 @@ const Projects = () => {
                         ...fontStyle
                       }}
                     >
-                      Case Study + {project.tags.join(' / ')}
+                     {project.tags.join(' / ')}
                     </Typography>
                   </CardContent>
                 </Card>

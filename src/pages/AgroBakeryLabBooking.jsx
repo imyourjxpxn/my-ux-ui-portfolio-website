@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import './AgroBakeryLabBooking.css';
-import heroImage from '../images/agrobakery/BakeryBookingcover.png';
-import OldBusinessFlow from '../images/agrobakery/OldBusinessFlow.png';
-import NewBusinessFlow from '../images/agrobakery/NewBusinessFlow.png';
-import StudentWireframe from '../images/agrobakery/StudentWireframe.png';
-import ProfWireframe from '../images/agrobakery/ProfWireframe.png';
-import StaffWireframe from '../images/agrobakery/StaffWireframe.png';
-import UIstyleguide from '../images/agrobakery/UIstyleguide.png';
-import StudentUI from '../images/agrobakery/StudentUI.png';
-import ProfUI from '../images/agrobakery/ProfUI.png';
-import StaffUI from '../images/agrobakery/StaffUI.png';
+import heroImage from '/assets/images/Agrobakery/BakeryBookingcover.png';
+import OldBusinessFlow from '/assets/images/Agrobakery/OldBusinessFlow.png';
+import NewBusinessFlow from '/assets/images/Agrobakery/NewBusinessFlow.png';
+import StudentWireframe from '/assets/images/Agrobakery/StudentWireframe.png';
+import ProfWireframe from '/assets/images/Agrobakery/ProfWireframe.png';
+import StaffWireframe from '/assets/images/Agrobakery/StaffWireframe.png';
+import UIstyleguide from '/assets/images/Agrobakery/UIstyleguide.png';
+import StudentUI from '/assets/images/Agrobakery/StudentUI.png';
+import ProfUI from '/assets/images/Agrobakery/ProfUI.png';
+import StaffUI from '/assets/images/Agrobakery/StaffUI.png';
 
 const AgroBakeryLabBooking = () => {
   useEffect(() => {
@@ -42,7 +42,7 @@ const AgroBakeryLabBooking = () => {
             </div>
             <div className="detail-item">
               <h3>Tools</h3>
-              <p>Figma, Miro, Google Forms</p>
+              <p>Figma, Figjam, draw.io, Google doc</p>
             </div>
           </div>
           <div className="overview-description">

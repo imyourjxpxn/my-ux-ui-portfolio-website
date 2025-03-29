@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="container hero-container">
         <div className="hero-content">
           <div className="profile-image">
-            <img src="/src/assets/profile.png" alt="Profile" />
+            <img src="/assets/images/profile.png" alt="Profile" />
           </div>
           <div className="hero-text">
             <h1>Hi, I'm <span className="name">Yeepoon</span>!</h1>
@@ -17,7 +17,7 @@ const Hero = () => {
               After three years of studying Computer Science,
               I'm currently seeking a <span className="highlight">UX/UI designer internship</span> 
             </h2>
-            <p className="sub-heading">
+            <p className="sub-heading" style={{ fontSize: '1.2rem' }}>
               I'm eager to apply my skills to create designs that meet both user needs and business goals.
             </p>
           </div>

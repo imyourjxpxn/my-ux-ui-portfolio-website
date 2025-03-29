@@ -84,19 +84,15 @@
 
 .project-info h3 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem; /* Increased from 1.5rem */
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #5D4037;
 }
 
-.project-description {
-  display: none;
-}
-
 .project-category {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem; /* Increased from 0.9rem */
   color: #8D6E63;
   font-weight: 500;
   margin-top: auto;
@@ -128,13 +124,7 @@
   }
   
   .project-info h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .project-description {
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem; /* Increased from 1.4rem */
   }
 }
 
@@ -170,6 +160,6 @@
   }
   
   .project-category {
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* Increased from 0.8rem */
   }
 }

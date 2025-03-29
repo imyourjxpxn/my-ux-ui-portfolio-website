@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import './mordee.css';
 
 // Import images
-import mainAppScreenshot from '../images/mordee/main-app-screenshot.png';
-import wireframe from '../images/mordee/wireframe.png';
-import finalHome from '../images/mordee/final.png';
-import typography from '../images/mordee/typography.png';
-import color from '../images/mordee/color.png';
-import component from '../images/mordee/component.png';
-import UIkits from '../images/mordee/UIkits.png';
-import Iteration from '../images/mordee/Iteration.png';
+import mainAppScreenshot from '/assets/images/mordee/main-app-screenshot.png';
+import wireframe from '/assets/images/mordee/wireframe.png';
+import finalHome from '/assets/images/mordee/final.png';
+import typography from '/assets/images/mordee/Typography.png';
+import color from '/assets/images/mordee/color.png';
+import component from '/assets/images/mordee/component.png';
+import UIkits from '/assets/images/mordee/UIkits.png';
+import Iteration from '/assets/images/mordee/iteration.png';
 
 const Mordee = () => {
   useEffect(() => {

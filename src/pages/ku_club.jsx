@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react';
 import './ku-club.css';
 
-import KUClubBanner from '../images/ku-club/ku-club-banner.png';
-import lowwireframe from  '../images/ku-club/low-wireframe-image.jpg';
-import midwireframe from '../images/ku-club/mid-wireframe-image.png';
-import Iteration1 from '../images/ku-club/Iteration1.png';
-import Iteration2 from '../images/ku-club/Iteration2.png';
-import Iteration3 from '../images/ku-club/Iteration3.png';
-import Iteration4 from '../images/ku-club/Iteration4.png';
+import KUClubBanner from '/assets/images/ku-club/ku-club-banner.png';
+import lowwireframe from '/assets/images/ku-club/low-wireframe-image.jpg';
+import midwireframe from '/assets/images/ku-club/mid-wireframe-image.png';
+import Iteration1 from '/assets/images/ku-club/Iteration1.png';
+import Iteration2 from '/assets/images/ku-club/Iteration2.png';
+import Iteration3 from '/assets/images/ku-club/Iteration3.png';
+import Iteration4 from '/assets/images/ku-club/Iteration4.png';
 
-import typography from '../images/ku-club/typography.png';
-import color from '../images/ku-club/color.png';
-import component from '../images/ku-club/component.png';
-import UIkits from '../images/ku-club/UIkits.png'
+import typography from '/assets/images/ku-club/typography.png';
+import color from '/assets/images/ku-club/color.png';
+import component from '/assets/images/ku-club/component.png';
+import UIkits from '/assets/images/ku-club/UIkits.png';
 
-import ImpactErrorMatrix from '../images/ku-club/ImpactMatrix.png';
+import ImpactErrorMatrix from '/assets/images/ku-club/ImpactMatrix.png';
 
-import FinalDesign from '../images/ku-club/hifi-wireframe.png';
+import FinalDesign from '/assets/images/ku-club/hifi-wireframe.png';
 
-import responsive from '../images/ku-club/wireframe-mobile.png';
+import responsive from '/assets/images/ku-club/wireframe-mobile.png';
 
 const KUClub = () => {
   useEffect(() => {

@@ -10,6 +10,7 @@
 
 .footer-container {
   display: flex;
+  flex-direction: column; /* Change to column for smaller screens */
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
@@ -19,7 +20,50 @@
 }
 
 .footer-content {
-  text-align: center;
+display: flex;
+  flex-direction: column; /* Change to column for better alignment */
+  align-items: center; /* Center align items */
+ width: 100%;
+  text-align: center; /* Center text */
+}
+
+.project-links {
+  margin-top: 2rem; /* Add margin for spacing */
+  text-align: center; /* Center text for smaller screens */
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row; /* Change to row for larger screens */
+  }
+
+  .footer-content {
+    flex-direction: row; /* Change to row for larger screens */
+    text-align: left; /* Align text to left for larger screens */
+  }
+
+  .project-links {
+    margin-left: auto;
+    text-align: right; /* Align text to right for larger screens */
+  }
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.links-container a {
+  color: #8B4513; /* Changed to brown */
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+  padding: 0.25rem 0;
+}
+
+.links-container a:hover {
+  opacity: 0.8;
 }
 
 .footer-content h2 {
@@ -38,6 +82,7 @@
 .email-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center; /* Center the content inside the link */
   gap: 0.8rem;
   color: var(--text-color);
   font-size: 1.2rem;

@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import './seniorplay.css';
-import main from '../images/seniorplay/main.png';
+import main from '/assets/images/seniorplay/main.png';
 
-const assumptionMapPath = '/images/seniorplay/assumtionMap.png';
-import Marketfit from '../images/seniorplay/Marketfit.png'; 
-import wireframe from '../images/seniorplay/wireframe.png'; 
-import Styleguide from '../images/seniorplay/Styleguide.png';
-import UIkits from '../images/seniorplay/UI.png'; 
-import persona1 from '../images/seniorplay/Persona1.png'; 
-import persona2 from '../images/seniorplay/Persona2.png'; 
-import persona3 from '../images/seniorplay/Persona3.png'; 
-import persona4 from '../images/seniorplay/Persona4.png'; 
+import assumptionMapPath from '/assets/images/seniorplay/assumtionMapcap.png';
+import Marketfit from '/assets/images/seniorplay/Marketfit.png'; 
+import wireframe from '/assets/images/seniorplay/wireframe.png'; 
+import Styleguide from '/assets/images/seniorplay/Styleguide.png';
+import UIkits from '/assets/images/seniorplay/UI.png'; 
+import persona1 from '/assets/images/seniorplay/Persona1.png'; 
+import persona2 from '/assets/images/seniorplay/Persona2.png'; 
+import persona3 from '/assets/images/seniorplay/Persona3.png'; 
+import persona4 from '/assets/images/seniorplay/Persona4.png'; 
 
 const SeniorPlay = () => {
   useEffect(() => {

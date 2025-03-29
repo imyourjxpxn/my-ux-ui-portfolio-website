@@ -5,12 +5,14 @@ import Projects from './components/Projects';
 import Navbar from './components/Navbar';
 import './App.css';
 import Footer from './components/Footer';
-import KUClub from './assets/pages/ku_club';
-import Mordee from './assets/pages/mordee';
+import KUClub from './pages/ku_club';
+import Mordee from './pages/mordee';
 
 // Lazy loading components
-const SeniorPlay = React.lazy(() => import('./assets/pages/seniorplay'));
-const AgroBakeryLabBooking = React.lazy(() => import('./assets/pages/AgroBakeryLabBooking'));
+const SeniorPlay = React.lazy(() => import('./pages/seniorplay'));
+const AgroBakeryLabBooking = React.lazy(() => import('./pages/AgroBakeryLabBooking'));
+const ku_club = React.lazy(() => import('./pages/ku_club'));
+const mordee = React.lazy(() => import('./pages/mordee'));
 
 function App() {
   return (
